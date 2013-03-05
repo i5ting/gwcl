@@ -26,6 +26,7 @@
 
 - (void)testExample
 {
+    LOG_EXPR(@"dddd");
 //    STFail(@"Unit tests are not implemented yet in gwclTests");
     STAssertNil(nil,@"sdsdsds");
     

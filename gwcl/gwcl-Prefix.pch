@@ -19,6 +19,8 @@
 \
 + (className *)shared##className;
 
+
+//#if (!__has_feature(objc_arc)) \
 //todo:把【aa new】也放到里面
 #define DEFINE_SINGLETON_FOR_CLASS(className) \
 \
@@ -29,8 +31,10 @@ dispatch_once(&onceToken, ^{ \
 shared##className = [[self alloc] init]; \
 }); \
 return shared##className; \
-}
+}  
 
 
 
+
+#import "VTPG_Common.h"
 

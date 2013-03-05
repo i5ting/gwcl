@@ -32,6 +32,15 @@
 		2540D40516E651BD00797E0E /* cx_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40316E651BD00797E0E /* cx_db.sqlite */; };
 		2540D40716E653EE00797E0E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40616E653EE00797E0E /* README.md */; };
 		2540D40816E653EE00797E0E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40616E653EE00797E0E /* README.md */; };
+		2540D40C16E6580700797E0E /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D40B16E6580700797E0E /* Cart.m */; };
+		2540D40D16E6580700797E0E /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D40B16E6580700797E0E /* Cart.m */; };
+		2540D41016E6581500797E0E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D40F16E6581500797E0E /* Item.m */; };
+		2540D41116E6581500797E0E /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D40F16E6581500797E0E /* Item.m */; };
+		2540D41416E6598C00797E0E /* MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D41316E6598C00797E0E /* MyCategory.m */; };
+		2540D41516E6598C00797E0E /* MyCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D41316E6598C00797E0E /* MyCategory.m */; };
+		2540D41916E6604900797E0E /* CartDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D41816E6604900797E0E /* CartDatabaseService.m */; };
+		2540D41A16E6604900797E0E /* CartDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D41816E6604900797E0E /* CartDatabaseService.m */; };
+		2540D41F16E6612900797E0E /* CartDatabaseServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D41E16E6612900797E0E /* CartDatabaseServiceTests.m */; };
 		25469AA216E630A3006A8B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA116E630A3006A8B6C /* UIKit.framework */; };
 		25469AA416E630A3006A8B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA316E630A3006A8B6C /* Foundation.framework */; };
 		25469AA616E630A3006A8B6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA516E630A3006A8B6C /* CoreGraphics.framework */; };
@@ -88,8 +97,18 @@
 		2540D3DE16E63FD400797E0E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		2540D3FC16E6410000797E0E /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
 		2540D3FD16E6410000797E0E /* VTPG_Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPG_Common.m; sourceTree = "<group>"; };
-		2540D40316E651BD00797E0E /* cx_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = cx_db.sqlite; path = ../src/db/cx_db.sqlite; sourceTree = "<group>"; };
+		2540D40316E651BD00797E0E /* cx_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cx_db.sqlite; sourceTree = "<group>"; };
 		2540D40616E653EE00797E0E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		2540D40A16E6580700797E0E /* Cart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cart.h; sourceTree = "<group>"; };
+		2540D40B16E6580700797E0E /* Cart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cart.m; sourceTree = "<group>"; };
+		2540D40E16E6581500797E0E /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		2540D40F16E6581500797E0E /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		2540D41216E6598B00797E0E /* MyCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCategory.h; sourceTree = "<group>"; };
+		2540D41316E6598C00797E0E /* MyCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCategory.m; sourceTree = "<group>"; };
+		2540D41716E6604900797E0E /* CartDatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartDatabaseService.h; sourceTree = "<group>"; };
+		2540D41816E6604900797E0E /* CartDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartDatabaseService.m; sourceTree = "<group>"; };
+		2540D41D16E6612900797E0E /* CartDatabaseServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartDatabaseServiceTests.h; sourceTree = "<group>"; };
+		2540D41E16E6612900797E0E /* CartDatabaseServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartDatabaseServiceTests.m; sourceTree = "<group>"; };
 		25469A9D16E630A3006A8B6C /* gwcl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gwcl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25469AA116E630A3006A8B6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25469AA316E630A3006A8B6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -167,6 +186,8 @@
 		2540D3BA16E636D800797E0E /* db */ = {
 			isa = PBXGroup;
 			children = (
+				2540D41B16E6611A00797E0E /* service */,
+				2540D41C16E6611A00797E0E /* model */,
 				2540D3BE16E6373F00797E0E /* DatabaseServiceTests.h */,
 				2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */,
 			);
@@ -194,7 +215,6 @@
 		2540D3D016E63FD400797E0E /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				2540D40316E651BD00797E0E /* cx_db.sqlite */,
 				2540D3FB16E6410000797E0E /* log */,
 				2540D3D116E63FD400797E0E /* fmdb */,
 			);
@@ -235,6 +255,44 @@
 				2540D3FD16E6410000797E0E /* VTPG_Common.m */,
 			);
 			path = log;
+			sourceTree = "<group>";
+		};
+		2540D40916E656E600797E0E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2540D40A16E6580700797E0E /* Cart.h */,
+				2540D40B16E6580700797E0E /* Cart.m */,
+				2540D40E16E6581500797E0E /* Item.h */,
+				2540D40F16E6581500797E0E /* Item.m */,
+				2540D41216E6598B00797E0E /* MyCategory.h */,
+				2540D41316E6598C00797E0E /* MyCategory.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		2540D41616E6602F00797E0E /* service */ = {
+			isa = PBXGroup;
+			children = (
+				2540D41716E6604900797E0E /* CartDatabaseService.h */,
+				2540D41816E6604900797E0E /* CartDatabaseService.m */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		2540D41B16E6611A00797E0E /* service */ = {
+			isa = PBXGroup;
+			children = (
+				2540D41D16E6612900797E0E /* CartDatabaseServiceTests.h */,
+				2540D41E16E6612900797E0E /* CartDatabaseServiceTests.m */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		2540D41C16E6611A00797E0E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		25469A9216E630A3006A8B6C = {
@@ -333,8 +391,11 @@
 		25469B6D16E634F8006A8B6C /* db */ = {
 			isa = PBXGroup;
 			children = (
+				2540D41616E6602F00797E0E /* service */,
+				2540D40916E656E600797E0E /* model */,
 				25469B6E16E63513006A8B6C /* DatabaseService.h */,
 				25469B6F16E63513006A8B6C /* DatabaseService.m */,
+				2540D40316E651BD00797E0E /* cx_db.sqlite */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -462,6 +523,10 @@
 				2540D3E716E63FD400797E0E /* FMDatabaseQueue.m in Sources */,
 				2540D3EB16E63FD400797E0E /* FMResultSet.m in Sources */,
 				2540D3FE16E6410000797E0E /* VTPG_Common.m in Sources */,
+				2540D40C16E6580700797E0E /* Cart.m in Sources */,
+				2540D41016E6581500797E0E /* Item.m in Sources */,
+				2540D41416E6598C00797E0E /* MyCategory.m in Sources */,
+				2540D41916E6604900797E0E /* CartDatabaseService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +546,11 @@
 				2540D3E816E63FD400797E0E /* FMDatabaseQueue.m in Sources */,
 				2540D3EC16E63FD400797E0E /* FMResultSet.m in Sources */,
 				2540D3FF16E6410000797E0E /* VTPG_Common.m in Sources */,
+				2540D40D16E6580700797E0E /* Cart.m in Sources */,
+				2540D41116E6581500797E0E /* Item.m in Sources */,
+				2540D41516E6598C00797E0E /* MyCategory.m in Sources */,
+				2540D41A16E6604900797E0E /* CartDatabaseService.m in Sources */,
+				2540D41F16E6612900797E0E /* CartDatabaseServiceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
