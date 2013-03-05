@@ -8,76 +8,104 @@
 
 #import "DatabaseService.h"
 
-@interface DatabaseService(){
+#define _DBFILE_NAME [NSString stringWithFormat:@"%@",@"cx_db.sqlite"]
 
+#define _DBFILE_DIR  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 
-}
-
--(void)createDb;
+@interface DatabaseService()
 
 
 @end
 
 @implementation DatabaseService
 
-@synthesize db;
 
-+ (id)sharedInstance
-{
-    static dispatch_once_t pred = 0;
-    __strong static id _sharedObject = nil;
-    dispatch_once(&pred, ^{
-        _sharedObject = [[self alloc] init]; // or some other init method
-        
-       
-    });
-    return _sharedObject;
++ (DatabaseService *)sharedInstance {
+	static DatabaseService *_sharedInstance;
+	if(!_sharedInstance) {
+		static dispatch_once_t oncePredicate;
+		dispatch_once(&oncePredicate, ^{
+			_sharedInstance = [[super allocWithZone:nil] init];
+        });
+    }
+    return _sharedInstance;
 }
-  
 
--(id)init
-{
+
++ (id)allocWithZone:(NSZone *)zone {
+	return [self sharedInstance];
+}
+
+
+- (id)copyWithZone:(NSZone *)zone {
+	return self;
+}
+
+#if (!__has_feature(objc_arc))
+
+- (id)retain {
+	return self;
+}
+
+- (unsigned)retainCount {
+	return UINT_MAX;  //denotes an object that cannot be released
+}
+
+- (oneway void)release {
+	//do nothing
+}
+
+- (id)autorelease {
+	return self;
+}
+
+#endif
+
+#pragma mark - lifecycle
+
+- (id)init {
     if (self = [super init]) {
+        NSLog(@"INFO: Begin singleton DataBaseService initialization......");
         
-       
-        [self copy_file_database];
+        NSString *bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:_DBFILE_NAME];
         
-//        self.db = [FMDatabase databaseWithPath:documentsDatabasePath];
+        NSString *dir = _DBFILE_DIR;
+        NSString *databasePath = [dir stringByAppendingPathComponent:_DBFILE_NAME];
+        NSFileManager *tempFileManager = [NSFileManager defaultManager];
+        BOOL isExisted = [tempFileManager fileExistsAtPath:databasePath];
+        if (!isExisted) {
+            NSLog(@"INFO_OC: 复制数据库文件 database.db from %@ to %@.", bundlePath, databasePath);
+            NSError *error = nil;
+            BOOL success = [[NSFileManager defaultManager] copyItemAtPath:bundlePath toPath:databasePath error:&error];
+            if (!success) {
+                NSLog(@"ERROR_OC: Failed to create writable database file with message '%@'.", [error localizedDescription]);
+            }
+        }
+        
+        db = [[FMDatabase databaseWithPath:databasePath] retain];
+        //打开sql跟踪日志
+        db.traceExecution = YES;
+        db.logsErrors=YES;
+        
+        if (![db open]) {
+            NSLog(@"INFO_OC: Failed to open database.");
+            [db release];
+            return self;
+        }
+
+        NSLog(@"INFO_OC: End singleton DataBaseService initialization......");
     }
     return self;
 }
 
--(void)copy_file_database
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *documentLibraryFolderPath = [documentsDirectory stringByAppendingPathComponent:@"db/"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:documentLibraryFolderPath]) {
-        NSLog(@"文件已经存在了");
-    }else {
-        NSString *resourceSampleImagesFolderPath =[[NSBundle mainBundle]
-                                                   pathForResource:@"gwcl"
-                                                   ofType:@"sqlite3"];
-        NSData *mainBundleFile = [NSData dataWithContentsOfFile:resourceSampleImagesFolderPath];
-        [[NSFileManager defaultManager] createFileAtPath:documentLibraryFolderPath
-                                                contents:mainBundleFile
-                                              attributes:nil];
-    }
-}
--(void)delete_file_databade
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory,NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *documentLibraryFolderPath = [documentsDirectory stringByAppendingPathComponent:@"elimimation"];
-    [[NSFileManager defaultManager] delete:documentLibraryFolderPath];
+-(void)dealloc{
+    [db close];
+    [db release];
+    [queue release];
+    [super dealloc];
 }
 
-
--(void)createDb
-{
-    
-    
-}
+#pragma mark - Private Methods Implemetions
 
 
 

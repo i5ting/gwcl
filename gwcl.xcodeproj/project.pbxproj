@@ -28,8 +28,8 @@
 		2540D3EC16E63FD400797E0E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3DE16E63FD400797E0E /* FMResultSet.m */; };
 		2540D3FE16E6410000797E0E /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3FD16E6410000797E0E /* VTPG_Common.m */; };
 		2540D3FF16E6410000797E0E /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3FD16E6410000797E0E /* VTPG_Common.m */; };
-		2540D40116E6481C00797E0E /* gwcl.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40016E6481C00797E0E /* gwcl.sqlite3 */; };
-		2540D40216E6481C00797E0E /* gwcl.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40016E6481C00797E0E /* gwcl.sqlite3 */; };
+		2540D40416E651BD00797E0E /* cx_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40316E651BD00797E0E /* cx_db.sqlite */; };
+		2540D40516E651BD00797E0E /* cx_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40316E651BD00797E0E /* cx_db.sqlite */; };
 		25469AA216E630A3006A8B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA116E630A3006A8B6C /* UIKit.framework */; };
 		25469AA416E630A3006A8B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA316E630A3006A8B6C /* Foundation.framework */; };
 		25469AA616E630A3006A8B6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA516E630A3006A8B6C /* CoreGraphics.framework */; };
@@ -86,7 +86,7 @@
 		2540D3DE16E63FD400797E0E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		2540D3FC16E6410000797E0E /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
 		2540D3FD16E6410000797E0E /* VTPG_Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPG_Common.m; sourceTree = "<group>"; };
-		2540D40016E6481C00797E0E /* gwcl.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = gwcl.sqlite3; path = gwcl/gwcl.sqlite3; sourceTree = SOURCE_ROOT; };
+		2540D40316E651BD00797E0E /* cx_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = cx_db.sqlite; path = ../src/db/cx_db.sqlite; sourceTree = "<group>"; };
 		25469A9D16E630A3006A8B6C /* gwcl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gwcl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25469AA116E630A3006A8B6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25469AA316E630A3006A8B6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -191,7 +191,7 @@
 		2540D3D016E63FD400797E0E /* vendor */ = {
 			isa = PBXGroup;
 			children = (
-				2540D40016E6481C00797E0E /* gwcl.sqlite3 */,
+				2540D40316E651BD00797E0E /* cx_db.sqlite */,
 				2540D3FB16E6410000797E0E /* log */,
 				2540D3D116E63FD400797E0E /* fmdb */,
 			);
@@ -410,7 +410,7 @@
 				25469AB416E630A3006A8B6C /* Default.png in Resources */,
 				25469AB616E630A3006A8B6C /* Default@2x.png in Resources */,
 				25469AB816E630A3006A8B6C /* Default-568h@2x.png in Resources */,
-				2540D40116E6481C00797E0E /* gwcl.sqlite3 in Resources */,
+				2540D40416E651BD00797E0E /* cx_db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25469ACA16E630A3006A8B6C /* InfoPlist.strings in Resources */,
-				2540D40216E6481C00797E0E /* gwcl.sqlite3 in Resources */,
+				2540D40516E651BD00797E0E /* cx_db.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +562,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gwcl/gwcl-Prefix.pch";
 				INFOPLIST_FILE = "gwcl/gwcl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/gwcl/vendor/fmdb\"",
@@ -577,6 +578,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gwcl/gwcl-Prefix.pch";
 				INFOPLIST_FILE = "gwcl/gwcl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/gwcl/vendor/fmdb\"",

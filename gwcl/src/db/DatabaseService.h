@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
+#import "FMDatabaseQueue.h"
 
-@interface DatabaseService : NSObject
-
-@property(nonatomic,retain,readwrite) FMDatabase *db;
-
+@interface DatabaseService : NSObject{
+    FMDatabase *db;
+    FMDatabaseQueue *queue;
+}
 
 + (id)sharedInstance;
-
 
 @end
