@@ -272,3 +272,72 @@ iPhone在重启时，会丢弃所有的tmp文件。
 随便分享一点，困了
 
 
+### 补充一个简单的用法
+
+CartDatabaseService 继承DatabaseService，这样它就可以使用db这个共享单例的变量
+
+```c
+#import "DatabaseService.h"
+
+@interface CartDatabaseService : DatabaseService
+- (NSMutableArray *)shiti_find_all_random;
+@end
+
+
+
+
+#import "CartDatabaseService.h"
+
+@implementation CartDatabaseService
+
+- (NSMutableArray *)find_all_in_cart{
+    FMResultSet *_rs = [db executeQuery:@"select id,tid,zid,tName,tPicAddress,a1, a2, a3 , a4 , a5 , tanswer, tdesc from tb_shiti where id<30"];
+    NSMutableArray *ret_array =  [[NSMutableArray alloc] init];
+    
+    if (_rs) {
+        while ([_rs next]) {
+            
+            NSString *tName = [_rs stringForColumn:@"tName"];
+            NSString *a1 = [_rs stringForColumn:@"a1"];
+            NSString *a2 = [_rs stringForColumn:@"a2"];
+            NSString *a3 = [_rs stringForColumn:@"a3"];
+            NSString *a4 = [_rs stringForColumn:@"a4"];
+            NSString *a5 = [_rs stringForColumn:@"a5"];
+            
+          DM_Object *t = [[DM_Object alloc] initWithName:tName];
+            
+           [ret_array addObject:t];
+            [t release];
+        }
+        return [ret_array autorelease];
+        
+    }else {
+        [ret_array release];
+        ret_array = nil;
+        return nil;
+    }
+}
+
+@end
+
+```
+
+
+测试
+
+```
+    CartDatabaseService *cdbs = [CartDatabaseService sharedInstance];
+    
+    NSArray *ret = [cdbs find_all_in_cart];
+    
+    for (NSString *name in ret) {
+        LOG_EXPR(name);
+    }
+
+```
+
+
+command +u 跑一下单元测试吧
+
+
+ok，完成
