@@ -30,6 +30,8 @@
 		2540D3FF16E6410000797E0E /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3FD16E6410000797E0E /* VTPG_Common.m */; };
 		2540D40416E651BD00797E0E /* cx_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40316E651BD00797E0E /* cx_db.sqlite */; };
 		2540D40516E651BD00797E0E /* cx_db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40316E651BD00797E0E /* cx_db.sqlite */; };
+		2540D40716E653EE00797E0E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40616E653EE00797E0E /* README.md */; };
+		2540D40816E653EE00797E0E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40616E653EE00797E0E /* README.md */; };
 		25469AA216E630A3006A8B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA116E630A3006A8B6C /* UIKit.framework */; };
 		25469AA416E630A3006A8B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA316E630A3006A8B6C /* Foundation.framework */; };
 		25469AA616E630A3006A8B6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA516E630A3006A8B6C /* CoreGraphics.framework */; };
@@ -87,6 +89,7 @@
 		2540D3FC16E6410000797E0E /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
 		2540D3FD16E6410000797E0E /* VTPG_Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPG_Common.m; sourceTree = "<group>"; };
 		2540D40316E651BD00797E0E /* cx_db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = cx_db.sqlite; path = ../src/db/cx_db.sqlite; sourceTree = "<group>"; };
+		2540D40616E653EE00797E0E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		25469A9D16E630A3006A8B6C /* gwcl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gwcl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25469AA116E630A3006A8B6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25469AA316E630A3006A8B6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -237,6 +240,7 @@
 		25469A9216E630A3006A8B6C = {
 			isa = PBXGroup;
 			children = (
+				2540D40616E653EE00797E0E /* README.md */,
 				25469AA716E630A3006A8B6C /* gwcl */,
 				25469AC516E630A3006A8B6C /* gwclTests */,
 				25469AA016E630A3006A8B6C /* Frameworks */,
@@ -411,6 +415,7 @@
 				25469AB616E630A3006A8B6C /* Default@2x.png in Resources */,
 				25469AB816E630A3006A8B6C /* Default-568h@2x.png in Resources */,
 				2540D40416E651BD00797E0E /* cx_db.sqlite in Resources */,
+				2540D40716E653EE00797E0E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +425,7 @@
 			files = (
 				25469ACA16E630A3006A8B6C /* InfoPlist.strings in Resources */,
 				2540D40516E651BD00797E0E /* cx_db.sqlite in Resources */,
+				2540D40816E653EE00797E0E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
