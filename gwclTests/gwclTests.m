@@ -26,7 +26,10 @@
 
 - (void)testExample
 {
-    STFail(@"Unit tests are not implemented yet in gwclTests");
+//    STFail(@"Unit tests are not implemented yet in gwclTests");
+    NSLog(@"sss");
+    STAssertNil(nil,@"sdsdsds");
+    
 }
 
 @end

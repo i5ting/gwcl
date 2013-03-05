@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2540D3B616E6367600797E0E /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B6B16E63496006A8B6C /* libFMDB.a */; };
+		2540D3B816E6367D00797E0E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B1F16E63156006A8B6C /* libsqlite3.dylib */; };
+		2540D3C016E6373F00797E0E /* DatabaseServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */; };
+		2540D3C416E6394500797E0E /* testSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3C316E6394500797E0E /* testSingleton.m */; };
+		2540D3C516E6394500797E0E /* testSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3C316E6394500797E0E /* testSingleton.m */; };
+		2540D3C916E63A2100797E0E /* testSingltonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3C816E63A2100797E0E /* testSingltonTests.m */; };
+		2540D3CA16E63B1400797E0E /* gwcl-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = 25469AAF16E630A3006A8B6C /* gwcl-Prefix.pch */; };
+		2540D3DF16E63FD400797E0E /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540D3D216E63FD400797E0E /* libFMDB.a */; };
+		2540D3E016E63FD400797E0E /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540D3D216E63FD400797E0E /* libFMDB.a */; };
+		2540D3E116E63FD400797E0E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3D516E63FD400797E0E /* FMDatabase.m */; };
+		2540D3E216E63FD400797E0E /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3D516E63FD400797E0E /* FMDatabase.m */; };
+		2540D3E316E63FD400797E0E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3D716E63FD400797E0E /* FMDatabaseAdditions.m */; };
+		2540D3E416E63FD400797E0E /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3D716E63FD400797E0E /* FMDatabaseAdditions.m */; };
+		2540D3E516E63FD400797E0E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3D916E63FD400797E0E /* FMDatabasePool.m */; };
+		2540D3E616E63FD400797E0E /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3D916E63FD400797E0E /* FMDatabasePool.m */; };
+		2540D3E716E63FD400797E0E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3DB16E63FD400797E0E /* FMDatabaseQueue.m */; };
+		2540D3E816E63FD400797E0E /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3DB16E63FD400797E0E /* FMDatabaseQueue.m */; };
+		2540D3EB16E63FD400797E0E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3DE16E63FD400797E0E /* FMResultSet.m */; };
+		2540D3EC16E63FD400797E0E /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3DE16E63FD400797E0E /* FMResultSet.m */; };
+		2540D3FE16E6410000797E0E /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3FD16E6410000797E0E /* VTPG_Common.m */; };
+		2540D3FF16E6410000797E0E /* VTPG_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3FD16E6410000797E0E /* VTPG_Common.m */; };
+		2540D40116E6481C00797E0E /* gwcl.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40016E6481C00797E0E /* gwcl.sqlite3 */; };
+		2540D40216E6481C00797E0E /* gwcl.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 2540D40016E6481C00797E0E /* gwcl.sqlite3 */; };
 		25469AA216E630A3006A8B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA116E630A3006A8B6C /* UIKit.framework */; };
 		25469AA416E630A3006A8B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA316E630A3006A8B6C /* Foundation.framework */; };
 		25469AA616E630A3006A8B6C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA516E630A3006A8B6C /* CoreGraphics.framework */; };
@@ -21,6 +44,15 @@
 		25469AC216E630A3006A8B6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469AA316E630A3006A8B6C /* Foundation.framework */; };
 		25469ACA16E630A3006A8B6C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 25469AC816E630A3006A8B6C /* InfoPlist.strings */; };
 		25469ACD16E630A3006A8B6C /* gwclTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25469ACC16E630A3006A8B6C /* gwclTests.m */; };
+		25469B1E16E6314F006A8B6C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B1D16E6314F006A8B6C /* CFNetwork.framework */; };
+		25469B2016E63156006A8B6C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B1F16E63156006A8B6C /* libsqlite3.dylib */; };
+		25469B2216E63161006A8B6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B2116E63161006A8B6C /* QuartzCore.framework */; };
+		25469B2416E6317C006A8B6C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B2316E6317C006A8B6C /* MobileCoreServices.framework */; };
+		25469B2616E631D4006A8B6C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B2516E631D4006A8B6C /* Security.framework */; };
+		25469B2816E63202006A8B6C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B2716E63202006A8B6C /* libz.dylib */; };
+		25469B6C16E63496006A8B6C /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B6B16E63496006A8B6C /* libFMDB.a */; };
+		25469B7016E63513006A8B6C /* DatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25469B6F16E63513006A8B6C /* DatabaseService.m */; };
+		25469B7116E63513006A8B6C /* DatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25469B6F16E63513006A8B6C /* DatabaseService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +66,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2540D3BE16E6373F00797E0E /* DatabaseServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseServiceTests.h; sourceTree = "<group>"; };
+		2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseServiceTests.m; sourceTree = "<group>"; };
+		2540D3C216E6394500797E0E /* testSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testSingleton.h; sourceTree = "<group>"; };
+		2540D3C316E6394500797E0E /* testSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testSingleton.m; sourceTree = "<group>"; };
+		2540D3C716E63A2100797E0E /* testSingltonTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testSingltonTests.h; sourceTree = "<group>"; };
+		2540D3C816E63A2100797E0E /* testSingltonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testSingltonTests.m; sourceTree = "<group>"; };
+		2540D3D216E63FD400797E0E /* libFMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFMDB.a; sourceTree = "<group>"; };
+		2540D3D416E63FD400797E0E /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2540D3D516E63FD400797E0E /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2540D3D616E63FD400797E0E /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2540D3D716E63FD400797E0E /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2540D3D816E63FD400797E0E /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2540D3D916E63FD400797E0E /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2540D3DA16E63FD400797E0E /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2540D3DB16E63FD400797E0E /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2540D3DC16E63FD400797E0E /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
+		2540D3DD16E63FD400797E0E /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2540D3DE16E63FD400797E0E /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2540D3FC16E6410000797E0E /* VTPG_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTPG_Common.h; sourceTree = "<group>"; };
+		2540D3FD16E6410000797E0E /* VTPG_Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTPG_Common.m; sourceTree = "<group>"; };
+		2540D40016E6481C00797E0E /* gwcl.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = gwcl.sqlite3; path = gwcl/gwcl.sqlite3; sourceTree = SOURCE_ROOT; };
 		25469A9D16E630A3006A8B6C /* gwcl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gwcl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25469AA116E630A3006A8B6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		25469AA316E630A3006A8B6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +106,15 @@
 		25469AC916E630A3006A8B6C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		25469ACB16E630A3006A8B6C /* gwclTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gwclTests.h; sourceTree = "<group>"; };
 		25469ACC16E630A3006A8B6C /* gwclTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gwclTests.m; sourceTree = "<group>"; };
+		25469B1D16E6314F006A8B6C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		25469B1F16E63156006A8B6C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		25469B2116E63161006A8B6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		25469B2316E6317C006A8B6C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		25469B2516E631D4006A8B6C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		25469B2716E63202006A8B6C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		25469B6B16E63496006A8B6C /* libFMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFMDB.a; path = gwcl/vendor/fmdb/libFMDB.a; sourceTree = "<group>"; };
+		25469B6E16E63513006A8B6C /* DatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseService.h; sourceTree = "<group>"; };
+		25469B6F16E63513006A8B6C /* DatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +122,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25469B6C16E63496006A8B6C /* libFMDB.a in Frameworks */,
+				25469B2816E63202006A8B6C /* libz.dylib in Frameworks */,
+				25469B2416E6317C006A8B6C /* MobileCoreServices.framework in Frameworks */,
+				25469B2616E631D4006A8B6C /* Security.framework in Frameworks */,
+				25469B2216E63161006A8B6C /* QuartzCore.framework in Frameworks */,
+				25469B2016E63156006A8B6C /* libsqlite3.dylib in Frameworks */,
+				25469B1E16E6314F006A8B6C /* CFNetwork.framework in Frameworks */,
 				25469AA216E630A3006A8B6C /* UIKit.framework in Frameworks */,
 				25469AA416E630A3006A8B6C /* Foundation.framework in Frameworks */,
 				25469AA616E630A3006A8B6C /* CoreGraphics.framework in Frameworks */,
+				2540D3DF16E63FD400797E0E /* libFMDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,15 +140,100 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2540D3B816E6367D00797E0E /* libsqlite3.dylib in Frameworks */,
+				2540D3B616E6367600797E0E /* libFMDB.a in Frameworks */,
 				25469AC016E630A3006A8B6C /* SenTestingKit.framework in Frameworks */,
 				25469AC116E630A3006A8B6C /* UIKit.framework in Frameworks */,
 				25469AC216E630A3006A8B6C /* Foundation.framework in Frameworks */,
+				2540D3E016E63FD400797E0E /* libFMDB.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2540D3B916E636D800797E0E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3C616E63A0900797E0E /* utils */,
+				2540D3BA16E636D800797E0E /* db */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2540D3BA16E636D800797E0E /* db */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3BE16E6373F00797E0E /* DatabaseServiceTests.h */,
+				2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		2540D3C116E6392900797E0E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3C216E6394500797E0E /* testSingleton.h */,
+				2540D3C316E6394500797E0E /* testSingleton.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		2540D3C616E63A0900797E0E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3C716E63A2100797E0E /* testSingltonTests.h */,
+				2540D3C816E63A2100797E0E /* testSingltonTests.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		2540D3D016E63FD400797E0E /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2540D40016E6481C00797E0E /* gwcl.sqlite3 */,
+				2540D3FB16E6410000797E0E /* log */,
+				2540D3D116E63FD400797E0E /* fmdb */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		2540D3D116E63FD400797E0E /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3D216E63FD400797E0E /* libFMDB.a */,
+				2540D3D316E63FD400797E0E /* src */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		2540D3D316E63FD400797E0E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3D416E63FD400797E0E /* FMDatabase.h */,
+				2540D3D516E63FD400797E0E /* FMDatabase.m */,
+				2540D3D616E63FD400797E0E /* FMDatabaseAdditions.h */,
+				2540D3D716E63FD400797E0E /* FMDatabaseAdditions.m */,
+				2540D3D816E63FD400797E0E /* FMDatabasePool.h */,
+				2540D3D916E63FD400797E0E /* FMDatabasePool.m */,
+				2540D3DA16E63FD400797E0E /* FMDatabaseQueue.h */,
+				2540D3DB16E63FD400797E0E /* FMDatabaseQueue.m */,
+				2540D3DC16E63FD400797E0E /* fmdb.m */,
+				2540D3DD16E63FD400797E0E /* FMResultSet.h */,
+				2540D3DE16E63FD400797E0E /* FMResultSet.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2540D3FB16E6410000797E0E /* log */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3FC16E6410000797E0E /* VTPG_Common.h */,
+				2540D3FD16E6410000797E0E /* VTPG_Common.m */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
 		25469A9216E630A3006A8B6C = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +256,13 @@
 		25469AA016E630A3006A8B6C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				25469B6B16E63496006A8B6C /* libFMDB.a */,
+				25469B2716E63202006A8B6C /* libz.dylib */,
+				25469B2516E631D4006A8B6C /* Security.framework */,
+				25469B2316E6317C006A8B6C /* MobileCoreServices.framework */,
+				25469B2116E63161006A8B6C /* QuartzCore.framework */,
+				25469B1F16E63156006A8B6C /* libsqlite3.dylib */,
+				25469B1D16E6314F006A8B6C /* CFNetwork.framework */,
 				25469AA116E630A3006A8B6C /* UIKit.framework */,
 				25469AA316E630A3006A8B6C /* Foundation.framework */,
 				25469AA516E630A3006A8B6C /* CoreGraphics.framework */,
@@ -112,6 +274,8 @@
 		25469AA716E630A3006A8B6C /* gwcl */ = {
 			isa = PBXGroup;
 			children = (
+				2540D3D016E63FD400797E0E /* vendor */,
+				25469AD616E630FB006A8B6C /* src */,
 				25469AB016E630A3006A8B6C /* AppDelegate.h */,
 				25469AB116E630A3006A8B6C /* AppDelegate.m */,
 				25469AA816E630A3006A8B6C /* Supporting Files */,
@@ -136,6 +300,7 @@
 		25469AC516E630A3006A8B6C /* gwclTests */ = {
 			isa = PBXGroup;
 			children = (
+				2540D3B916E636D800797E0E /* src */,
 				25469ACB16E630A3006A8B6C /* gwclTests.h */,
 				25469ACC16E630A3006A8B6C /* gwclTests.m */,
 				25469AC616E630A3006A8B6C /* Supporting Files */,
@@ -150,6 +315,24 @@
 				25469AC816E630A3006A8B6C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		25469AD616E630FB006A8B6C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2540D3C116E6392900797E0E /* utils */,
+				25469B6D16E634F8006A8B6C /* db */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		25469B6D16E634F8006A8B6C /* db */ = {
+			isa = PBXGroup;
+			children = (
+				25469B6E16E63513006A8B6C /* DatabaseService.h */,
+				25469B6F16E63513006A8B6C /* DatabaseService.m */,
+			);
+			path = db;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +410,7 @@
 				25469AB416E630A3006A8B6C /* Default.png in Resources */,
 				25469AB616E630A3006A8B6C /* Default@2x.png in Resources */,
 				25469AB816E630A3006A8B6C /* Default-568h@2x.png in Resources */,
+				2540D40116E6481C00797E0E /* gwcl.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25469ACA16E630A3006A8B6C /* InfoPlist.strings in Resources */,
+				2540D40216E6481C00797E0E /* gwcl.sqlite3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +448,14 @@
 			files = (
 				25469AAE16E630A3006A8B6C /* main.m in Sources */,
 				25469AB216E630A3006A8B6C /* AppDelegate.m in Sources */,
+				25469B7016E63513006A8B6C /* DatabaseService.m in Sources */,
+				2540D3C416E6394500797E0E /* testSingleton.m in Sources */,
+				2540D3E116E63FD400797E0E /* FMDatabase.m in Sources */,
+				2540D3E316E63FD400797E0E /* FMDatabaseAdditions.m in Sources */,
+				2540D3E516E63FD400797E0E /* FMDatabasePool.m in Sources */,
+				2540D3E716E63FD400797E0E /* FMDatabaseQueue.m in Sources */,
+				2540D3EB16E63FD400797E0E /* FMResultSet.m in Sources */,
+				2540D3FE16E6410000797E0E /* VTPG_Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +463,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2540D3CA16E63B1400797E0E /* gwcl-Prefix.pch in Sources */,
 				25469ACD16E630A3006A8B6C /* gwclTests.m in Sources */,
+				25469B7116E63513006A8B6C /* DatabaseService.m in Sources */,
+				2540D3C016E6373F00797E0E /* DatabaseServiceTests.m in Sources */,
+				2540D3C516E6394500797E0E /* testSingleton.m in Sources */,
+				2540D3C916E63A2100797E0E /* testSingltonTests.m in Sources */,
+				2540D3E216E63FD400797E0E /* FMDatabase.m in Sources */,
+				2540D3E416E63FD400797E0E /* FMDatabaseAdditions.m in Sources */,
+				2540D3E616E63FD400797E0E /* FMDatabasePool.m in Sources */,
+				2540D3E816E63FD400797E0E /* FMDatabaseQueue.m in Sources */,
+				2540D3EC16E63FD400797E0E /* FMResultSet.m in Sources */,
+				2540D3FF16E6410000797E0E /* VTPG_Common.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +562,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gwcl/gwcl-Prefix.pch";
 				INFOPLIST_FILE = "gwcl/gwcl-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/gwcl/vendor/fmdb\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -369,6 +577,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gwcl/gwcl-Prefix.pch";
 				INFOPLIST_FILE = "gwcl/gwcl-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/gwcl/vendor/fmdb\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -385,6 +597,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gwcl/gwcl-Prefix.pch";
 				INFOPLIST_FILE = "gwclTests/gwclTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/gwcl/vendor/fmdb\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -402,6 +618,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gwcl/gwcl-Prefix.pch";
 				INFOPLIST_FILE = "gwclTests/gwclTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/gwcl/vendor/fmdb\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -427,6 +647,7 @@
 				25469AD216E630A3006A8B6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25469AD316E630A3006A8B6C /* Build configuration list for PBXNativeTarget "gwclTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +656,7 @@
 				25469AD516E630A3006A8B6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

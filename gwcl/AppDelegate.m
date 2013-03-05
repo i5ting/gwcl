@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "testSingleton.h"
 
 @implementation AppDelegate
 
@@ -22,6 +23,14 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    testSingleton *old_obj = [testSingleton new];
+    //    STAssertEqualObjects(a1, a2, description, ...)
+    
+    testSingleton *new_obj = [testSingleton sharedtestSingleton];
+    
+    
+    
     return YES;
 }
 
