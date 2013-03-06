@@ -64,6 +64,11 @@
 		25469B6C16E63496006A8B6C /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B6B16E63496006A8B6C /* libFMDB.a */; };
 		25469B7016E63513006A8B6C /* DatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25469B6F16E63513006A8B6C /* DatabaseService.m */; };
 		25469B7116E63513006A8B6C /* DatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 25469B6F16E63513006A8B6C /* DatabaseService.m */; };
+		5D92849316E7165B002124F0 /* benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849016E7165B002124F0 /* benchmark.m */; };
+		5D92849416E7165B002124F0 /* benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849016E7165B002124F0 /* benchmark.m */; };
+		5D92849516E7165B002124F0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D92849216E7165B002124F0 /* README.md */; };
+		5D92849616E7165B002124F0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D92849216E7165B002124F0 /* README.md */; };
+		5DBFD66316E6E00F002AE2FB /* No320BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBFD66216E6E00E002AE2FB /* No320BaseModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +142,12 @@
 		25469B6B16E63496006A8B6C /* libFMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFMDB.a; path = gwcl/vendor/fmdb/libFMDB.a; sourceTree = "<group>"; };
 		25469B6E16E63513006A8B6C /* DatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseService.h; sourceTree = "<group>"; };
 		25469B6F16E63513006A8B6C /* DatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseService.m; sourceTree = "<group>"; };
+		5D92848F16E7165B002124F0 /* benchmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = benchmark.h; sourceTree = "<group>"; };
+		5D92849016E7165B002124F0 /* benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = benchmark.m; sourceTree = "<group>"; };
+		5D92849116E7165B002124F0 /* ios_test_unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_test_unit.h; sourceTree = "<group>"; };
+		5D92849216E7165B002124F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5DBFD66116E6E00E002AE2FB /* No320BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320BaseModel.h; sourceTree = "<group>"; };
+		5DBFD66216E6E00E002AE2FB /* No320BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320BaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +226,7 @@
 		2540D3D016E63FD400797E0E /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				5D92848E16E7165B002124F0 /* ios-test-unit */,
 				2540D3FB16E6410000797E0E /* log */,
 				2540D3D116E63FD400797E0E /* fmdb */,
 			);
@@ -396,8 +408,21 @@
 				25469B6E16E63513006A8B6C /* DatabaseService.h */,
 				25469B6F16E63513006A8B6C /* DatabaseService.m */,
 				2540D40316E651BD00797E0E /* cx_db.sqlite */,
+				5DBFD66116E6E00E002AE2FB /* No320BaseModel.h */,
+				5DBFD66216E6E00E002AE2FB /* No320BaseModel.m */,
 			);
 			path = db;
+			sourceTree = "<group>";
+		};
+		5D92848E16E7165B002124F0 /* ios-test-unit */ = {
+			isa = PBXGroup;
+			children = (
+				5D92848F16E7165B002124F0 /* benchmark.h */,
+				5D92849016E7165B002124F0 /* benchmark.m */,
+				5D92849116E7165B002124F0 /* ios_test_unit.h */,
+				5D92849216E7165B002124F0 /* README.md */,
+			);
+			path = "ios-test-unit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +502,7 @@
 				25469AB816E630A3006A8B6C /* Default-568h@2x.png in Resources */,
 				2540D40416E651BD00797E0E /* cx_db.sqlite in Resources */,
 				2540D40716E653EE00797E0E /* README.md in Resources */,
+				5D92849516E7165B002124F0 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +513,7 @@
 				25469ACA16E630A3006A8B6C /* InfoPlist.strings in Resources */,
 				2540D40516E651BD00797E0E /* cx_db.sqlite in Resources */,
 				2540D40816E653EE00797E0E /* README.md in Resources */,
+				5D92849616E7165B002124F0 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +554,8 @@
 				2540D41016E6581500797E0E /* Item.m in Sources */,
 				2540D41416E6598C00797E0E /* MyCategory.m in Sources */,
 				2540D41916E6604900797E0E /* CartDatabaseService.m in Sources */,
+				5DBFD66316E6E00F002AE2FB /* No320BaseModel.m in Sources */,
+				5D92849316E7165B002124F0 /* benchmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +580,7 @@
 				2540D41516E6598C00797E0E /* MyCategory.m in Sources */,
 				2540D41A16E6604900797E0E /* CartDatabaseService.m in Sources */,
 				2540D41F16E6612900797E0E /* CartDatabaseServiceTests.m in Sources */,
+				5D92849416E7165B002124F0 /* benchmark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

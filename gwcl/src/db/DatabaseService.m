@@ -109,4 +109,55 @@
 
 
 
+#pragma mark - Public Methods Implemetions
+
+-(NSMutableArray *)find_by_sql:(NSString *)query_sql with_rs_callback:(No320BaseModel* (^)(FMResultSet *_rs,int _line_num))rs_block{
+    FMResultSet *_rs = [db executeQuery:query_sql];
+    NSMutableArray *ret_array =  [[NSMutableArray alloc] init];
+    int line_num = 0;
+    
+    if (_rs) {
+        while ([_rs next]) {
+            @autoreleasepool {
+                No320BaseModel *obj = rs_block(_rs,line_num);
+                
+                if (obj) {
+                    [ret_array addObject:obj];
+                }
+                
+                SAFE_RELEASE(obj);
+            }
+            
+            line_num++;//from 0+
+        }
+        return [ret_array autorelease];
+        
+    }else {
+        SAFE_RELEASE(ret_array);
+        return nil;
+    }
+}
+
+
+
+-(int) executeInsertWithSql:(NSString *) statement, ...
+{
+ 
+   NSMutableArray *argsArray = [[NSMutableArray alloc] init];
+    id arg;
+    va_list argList;
+    if(statement)
+    {
+        va_start(argList,statement);
+        
+        while (arg = va_arg(argList, id) )
+        {
+            [argsArray addObject:arg];
+        }
+        va_end(argList);
+    }
+    BOOL bResult = [db executeUpdate:statement,[argsArray objectAtIndex:0],[argsArray  objectAtIndex:1]];
+    return bResult;
+}
+
 @end

@@ -17,7 +17,7 @@
     if (_rs) {
         while ([_rs next]) {
             
-            NSLog(@"--%@",[_rs stringForColumn:@"tName"]  );
+//            NSLog(@"--%@",[_rs stringForColumn:@"tName"]  );
             //            int * tid = [_rs intForColumn:@"id"];
             int mid = [_rs intForColumn:@"id"];
             NSString *tid = [_rs stringForColumn:@"tid"];
@@ -45,6 +45,33 @@
         ret_array = nil;
         return nil;
     }
+}
+
+
+-(NSMutableArray *)find_test_by_by_sql{
+    
+    NSString *sql = @"select id,tid,zid,tName,tPicAddress,a1, a2, a3 , a4 , a5 , tanswer, tdesc from tb_shiti where id<30";
+//    
+    
+    __block No320BaseModel *cccc=1;
+    
+    NSMutableArray *f =[self find_by_sql:sql with_rs_callback:^No320BaseModel *(FMResultSet *_rs,int _line_num) {
+        
+        No320BaseModel *obj = [No320BaseModel new];
+        obj.name =[_rs stringForColumn:@"tName"];
+        
+        
+        if (_line_num == 1) {
+            cccc = obj;
+        }
+        
+        
+        return obj;
+        
+    }];
+    
+    
+    return f;
 }
 
 @end
