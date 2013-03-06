@@ -68,6 +68,11 @@
 		5D92849416E7165B002124F0 /* benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849016E7165B002124F0 /* benchmark.m */; };
 		5D92849516E7165B002124F0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D92849216E7165B002124F0 /* README.md */; };
 		5D92849616E7165B002124F0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5D92849216E7165B002124F0 /* README.md */; };
+		5D92849716E742A6002124F0 /* ios_test_unit.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849116E7165B002124F0 /* ios_test_unit.h */; };
+		5D92849A16E749C6002124F0 /* ItemDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849916E749C6002124F0 /* ItemDatabaseService.m */; };
+		5D92849B16E749C6002124F0 /* ItemDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849916E749C6002124F0 /* ItemDatabaseService.m */; };
+		5D92849E16E749D7002124F0 /* MyCategoryDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849D16E749D7002124F0 /* MyCategoryDatabaseService.m */; };
+		5D92849F16E749D7002124F0 /* MyCategoryDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D92849D16E749D7002124F0 /* MyCategoryDatabaseService.m */; };
 		5DBFD66316E6E00F002AE2FB /* No320BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBFD66216E6E00E002AE2FB /* No320BaseModel.m */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +151,10 @@
 		5D92849016E7165B002124F0 /* benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = benchmark.m; sourceTree = "<group>"; };
 		5D92849116E7165B002124F0 /* ios_test_unit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_test_unit.h; sourceTree = "<group>"; };
 		5D92849216E7165B002124F0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5D92849816E749C6002124F0 /* ItemDatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemDatabaseService.h; sourceTree = "<group>"; };
+		5D92849916E749C6002124F0 /* ItemDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemDatabaseService.m; sourceTree = "<group>"; };
+		5D92849C16E749D7002124F0 /* MyCategoryDatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCategoryDatabaseService.h; sourceTree = "<group>"; };
+		5D92849D16E749D7002124F0 /* MyCategoryDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCategoryDatabaseService.m; sourceTree = "<group>"; };
 		5DBFD66116E6E00E002AE2FB /* No320BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = No320BaseModel.h; sourceTree = "<group>"; };
 		5DBFD66216E6E00E002AE2FB /* No320BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = No320BaseModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +296,10 @@
 			children = (
 				2540D41716E6604900797E0E /* CartDatabaseService.h */,
 				2540D41816E6604900797E0E /* CartDatabaseService.m */,
+				5D92849816E749C6002124F0 /* ItemDatabaseService.h */,
+				5D92849916E749C6002124F0 /* ItemDatabaseService.m */,
+				5D92849C16E749D7002124F0 /* MyCategoryDatabaseService.h */,
+				5D92849D16E749D7002124F0 /* MyCategoryDatabaseService.m */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -556,6 +569,8 @@
 				2540D41916E6604900797E0E /* CartDatabaseService.m in Sources */,
 				5DBFD66316E6E00F002AE2FB /* No320BaseModel.m in Sources */,
 				5D92849316E7165B002124F0 /* benchmark.m in Sources */,
+				5D92849A16E749C6002124F0 /* ItemDatabaseService.m in Sources */,
+				5D92849E16E749D7002124F0 /* MyCategoryDatabaseService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D92849716E742A6002124F0 /* ios_test_unit.h in Sources */,
 				2540D3CA16E63B1400797E0E /* gwcl-Prefix.pch in Sources */,
 				25469ACD16E630A3006A8B6C /* gwclTests.m in Sources */,
 				25469B7116E63513006A8B6C /* DatabaseService.m in Sources */,
@@ -581,6 +597,8 @@
 				2540D41A16E6604900797E0E /* CartDatabaseService.m in Sources */,
 				2540D41F16E6612900797E0E /* CartDatabaseServiceTests.m in Sources */,
 				5D92849416E7165B002124F0 /* benchmark.m in Sources */,
+				5D92849B16E749C6002124F0 /* ItemDatabaseService.m in Sources */,
+				5D92849F16E749D7002124F0 /* MyCategoryDatabaseService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

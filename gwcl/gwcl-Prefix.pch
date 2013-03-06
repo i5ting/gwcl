@@ -38,6 +38,8 @@ return shared##className; \
 
 #import "VTPG_Common.h"
 
+#import "No320BaseModel.h"
+
 
 #import "ios_test_unit.h"
 #import "benchmark.h"

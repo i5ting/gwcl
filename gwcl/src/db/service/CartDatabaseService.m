@@ -74,4 +74,32 @@
     return f;
 }
 
+-(BOOL)insert_by_sql:(NSString *)tname
+{
+    NSString *sql = @"insert into tb_shiti(tName) values(?);";
+    
+    return  [db executeUpdate:sql,tname,nil];
+}
+
+
+-(BOOL)create_by_date:(NSString *)date
+{
+    NSString *sql = @"insert into tb_cart(cart_date,all_count,finished_count) values(?,0,0);";
+    return  [db executeUpdate:sql,date,nil];
+
+}
+
+
+-(int)find_all_count{
+    NSString *sql = @"select count(0) from tb_cart;";
+    return [self find_one_column_by_sql:sql];
+}
+
+-(int)find_all_count_by_date{
+
+}
+
+
+
+
 @end

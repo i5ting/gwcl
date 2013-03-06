@@ -7,8 +7,29 @@
 //
 
 #import <Foundation/Foundation.h>
+/****
+ 
+ drop table tb_cart;
+ 
+ CREATE TABLE  tb_cart(
+ cid INTEGER primary key autoincrement,
+ all_count number,
+ finished_count number,
+ desc VARCHAR2(255),
+ is_finished number,
+ cart_date number,
+ CREATE_TIME DATETIME DEFAULT (datetime(CURRENT_TIMESTAMP,'localtime'))
+ );
+ 
+ 
+ 
+ CREATE UNIQUE INDEX tb_cart_idx ON tb_cart(cart_date DESC);
+ 
+ insert into tb_cart(cart_date,all_count,finished_count) values(20130317,0,0);
 
-@interface Cart : NSObject
+ 
+ ****/
+@interface Cart : No320BaseModel
 
 @property(nonatomic,retain,readwrite) NSString *date;
 

@@ -11,7 +11,7 @@
 /**
  * 至少支持2级
  */
-@interface MyCategory : NSObject
+@interface MyCategory : No320BaseModel
 
 
 /**

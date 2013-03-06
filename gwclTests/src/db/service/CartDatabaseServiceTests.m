@@ -44,20 +44,46 @@
 }
 
 
- 
+-(void)testInsert
+{
+    BOOL i = [cdbs insert_by_sql:@"sdfsdfsds"];
+    
+    assert_true(i, @"1 is succ");
+}
+
 
 -(void)testT
 {
-     
-    
     [self benchmarking_with_message_and_execute_times_show_detail];
+}
 
+
+
+-(void)test_create_by_date
+{
+    BOOL t1=[cdbs create_by_date:@"20120412"];
+    BOOL t2=[cdbs create_by_date:@"20120412"];
+    BOOL t3=[cdbs create_by_date:@"20120413"];
+
+//    assert_true(t1, @"first succ");
+    
+    assert_false(t2, @"uqi index,must be false");
     
     
     
 }
 
 
+-(void)test_find_all_count
+{
+    int i = [cdbs find_all_count];
+ 
+    
+    assert_true(i > 1, @"count > 1 is succ");
+
+}
+
+#pragma mark - private
 
 -(void)benchmarking_with_message_and_execute_times
 {

@@ -139,25 +139,16 @@
 }
 
 
-
--(int) executeInsertWithSql:(NSString *) statement, ...
+-(int)find_one_column_by_sql:(NSString *)query_sql
 {
- 
-   NSMutableArray *argsArray = [[NSMutableArray alloc] init];
-    id arg;
-    va_list argList;
-    if(statement)
-    {
-        va_start(argList,statement);
-        
-        while (arg = va_arg(argList, id) )
-        {
-            [argsArray addObject:arg];
-        }
-        va_end(argList);
+    FMResultSet *s =[db executeQuery:query_sql];
+    
+    if ([s next]) {
+        return [s intForColumnIndex:0];
     }
-    BOOL bResult = [db executeUpdate:statement,[argsArray objectAtIndex:0],[argsArray  objectAtIndex:1]];
-    return bResult;
+    
+    return  0;
 }
+ 
 
 @end
