@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "testSingleton.h"
+#import "IndexViewController.h"
 
 @implementation AppDelegate
 
@@ -21,16 +22,15 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    
+    UINavigationController *rootvc = [[UINavigationController alloc]
+                                      initWithRootViewController:[IndexViewController new]];
+    
+    [rootvc setNavigationBarHidden:YES];
+    self.window.rootViewController = rootvc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    testSingleton *old_obj = [testSingleton new];
-    //    STAssertEqualObjects(a1, a2, description, ...)
-    
-    testSingleton *new_obj = [testSingleton sharedtestSingleton];
-    
-    
-    
+
     return YES;
 }
 

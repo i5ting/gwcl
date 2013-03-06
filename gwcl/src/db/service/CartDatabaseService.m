@@ -39,7 +39,6 @@
     return f;
 }
 
-
 -(int)find_all_count{
     NSString *sql = @"select count(0) from tb_cart;";
     return [self find_one_column_by_sql:sql];
@@ -50,5 +49,6 @@
     NSString *sql = [NSString stringWithFormat:@"select count(0) from tb_cart where cart_date=%@",date];
     return [self find_one_column_by_sql:sql];
 }
+
 
 @end
