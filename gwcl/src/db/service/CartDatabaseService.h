@@ -7,27 +7,23 @@
 //
 
 #import "DatabaseService.h"
+#import "Cart.h"
 
 @interface CartDatabaseService : DatabaseService
-- (NSMutableArray *)find_all_in_cart;
 
-
--(NSMutableArray *)find_test_by_by_sql;
-
-
--(BOOL)insert_by_sql:(NSString *)tname;
-
-
+//ok
 -(BOOL)create_by_date:(NSString *)date;
 
+//ok
 -(BOOL)delete_by_date:(NSString *)date;
 
-
+//ok
 -(NSMutableArray *)find_carts_by_date_desc;
 
-
+//ok
 -(int)find_all_count;
 
--(int)find_all_count_by_date;
+//ok
+-(int)find_all_count_by_date:(NSString *)date;
 
 @end

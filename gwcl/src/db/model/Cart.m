@@ -10,4 +10,10 @@
 
 @implementation Cart
 
+@synthesize date;
+@synthesize all_count;
+@synthesize finished_count;
+@synthesize is_finished;
+@synthesize desc;
+
 @end

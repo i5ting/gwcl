@@ -68,19 +68,33 @@
 //    assert_true(t1, @"first succ");
     
     assert_false(t2, @"uqi index,must be false");
-    
-    
-    
 }
 
+
+-(void)test_delete_by_date
+{
+    BOOL f = [cdbs delete_by_date:@"20120412"];
+    assert_true(f, @"no this date");
+//    assert_false(f, @"no this date");
+}
+
+
+-(void)test_find_carts_by_date_desc
+{
+    NSMutableArray *m = [cdbs find_carts_by_date_desc];
+    assert_true([m count]==2,@"目前有2个记录");
+}
 
 -(void)test_find_all_count
 {
     int i = [cdbs find_all_count];
- 
-    
     assert_true(i > 1, @"count > 1 is succ");
+}
 
+-(void)test_find_all_count_by_date
+{
+    int i = [cdbs find_all_count_by_date:@"20130317"];
+    assert_true(i > 0, @"count > 1 is succ");
 }
 
 #pragma mark - private

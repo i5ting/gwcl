@@ -31,22 +31,22 @@
  ****/
 @interface Cart : No320BaseModel
 
-@property(nonatomic,retain,readwrite) NSString *date;
+@property(nonatomic,assign,readwrite) int date;
 
 /**
  * 商品总数
  */
-@property(nonatomic,retain,readwrite) NSString *all_count;
+@property(nonatomic,assign,readwrite) int all_count;
 
 /**
  * 已完成数
  */
-@property(nonatomic,retain,readwrite) NSString *finished_count;
-@property(nonatomic,retain,readwrite) NSString *desc;
+@property(nonatomic,assign,readwrite) int finished_count;
+@property(nonatomic,assign,readwrite) int desc;
 
 /**
  * 是否完成
  */
-@property(nonatomic,retain,readwrite) NSString *is_finished;
+@property(nonatomic,assign,readwrite) int is_finished;
 
 @end
