@@ -19,7 +19,9 @@
 }
 
 + (id)sharedInstance;
- 
+
+@property(nonatomic,assign,readwrite) BOOL traceExecution;
+@property(nonatomic,assign,readwrite) BOOL logsErrors;
 
 /**
  *

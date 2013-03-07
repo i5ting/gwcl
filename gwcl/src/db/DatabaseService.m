@@ -19,6 +19,8 @@
 
 @implementation DatabaseService
 
+@synthesize logsErrors;
+@synthesize traceExecution;
 
 + (DatabaseService *)sharedInstance {
 	static DatabaseService *_sharedInstance;
@@ -67,6 +69,9 @@
     if (self = [super init]) {
         NSLog(@"INFO: Begin singleton DataBaseService initialization......");
         
+        self.logsErrors = NO;
+        self.traceExecution = NO;
+        
         NSString *bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:_DBFILE_NAME];
         
         NSString *dir = _DBFILE_DIR;
@@ -83,9 +88,10 @@
         }
         
         db = [[FMDatabase databaseWithPath:databasePath] retain];
+        
         //打开sql跟踪日志
-        db.traceExecution = YES;
-        db.logsErrors=YES;
+        db.traceExecution = self.traceExecution;
+        db.logsErrors = self.logsErrors;
         
         if (![db open]) {
             NSLog(@"INFO_OC: Failed to open database.");
