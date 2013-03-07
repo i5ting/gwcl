@@ -16,4 +16,11 @@
 @synthesize is_finished;
 @synthesize desc;
 
+
+-(void)dealloc{
+    [desc release];
+    //no retain object need release
+    [super dealloc];
+}
+
 @end

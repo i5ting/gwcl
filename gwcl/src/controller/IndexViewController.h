@@ -11,6 +11,8 @@
 
 #import "GouwuCur.h"
 
+#import "CartTableViewController.h"
+
 
 @interface IndexViewController : UIViewController
 

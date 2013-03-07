@@ -12,4 +12,11 @@
 
 @synthesize name,danwei,parent_id;
 
+-(void)dealloc
+{
+    [name release];
+    [danwei release];
+    [super dealloc];
+}
+
 @end

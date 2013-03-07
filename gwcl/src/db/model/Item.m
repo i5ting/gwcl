@@ -12,4 +12,10 @@
 
 @synthesize category_id,count,is_finished,details;
 
+-(void)dealloc
+{
+    [details release];
+    [super dealloc];
+}
+
 @end

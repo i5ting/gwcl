@@ -29,14 +29,14 @@
 /**
  * 商品总数
  */
-@property(nonatomic,retain,readwrite) NSString *count;
+@property(nonatomic,assign,readwrite) int *count;
 
 
 
 /**
  * 是否完成
  */
-@property(nonatomic,retain,readwrite) NSString *is_finished;
+@property(nonatomic,assign,readwrite) int *is_finished;
 
 
 @end

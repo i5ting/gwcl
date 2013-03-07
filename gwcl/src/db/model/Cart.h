@@ -42,7 +42,7 @@
  * 已完成数
  */
 @property(nonatomic,assign,readwrite) int finished_count;
-@property(nonatomic,assign,readwrite) int desc;
+@property(nonatomic,retain,readwrite) NSString *desc;
 
 /**
  * 是否完成

@@ -32,13 +32,16 @@
 	// Do any additional setup after loading the view.
 //    [self.view setBackgroundColor:[UIColor orangeColor]];
     
-//    _topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-//    [self.view addSubview:_topView];
-//    
+    _topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    [self.view addSubview:_topView];
+//
 //    _gouwu_cur_view = [[GouwuCur alloc] initWithFrame:CGRectMake(0, 44, 320, 197)];
 //    [self.view addSubview:_gouwu_cur_view];
-//    
+//
     
+    CartTableViewController *cart_vc = [[CartTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    cart_vc.view.frame = CGRectMake(0, 44, 320, 480-44);
+    [self.view addSubview:cart_vc.view];
 }
 
 - (void)didReceiveMemoryWarning
