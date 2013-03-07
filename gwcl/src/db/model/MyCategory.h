@@ -22,7 +22,7 @@
 /**
  * 分类归属
  */
-@property(nonatomic,retain,readwrite) NSString *parent_id;
+@property(nonatomic,assign,readwrite) int parent_id;
 
 
 /**

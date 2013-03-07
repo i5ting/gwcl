@@ -10,4 +10,6 @@
 
 @implementation Item
 
+@synthesize category_id,count,is_finished,details;
+
 @end

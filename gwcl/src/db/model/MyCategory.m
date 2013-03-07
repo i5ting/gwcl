@@ -10,4 +10,6 @@
 
 @implementation MyCategory
 
+@synthesize name,danwei,parent_id;
+
 @end

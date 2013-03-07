@@ -14,7 +14,7 @@
 /**
  * 分类id
  */
-@property(nonatomic,retain,readwrite) NSString *category_id;
+@property(nonatomic,assign,readwrite) int category_id;
 
 
 
