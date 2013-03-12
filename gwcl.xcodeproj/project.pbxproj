@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2538F7FC16EF878200666CF9 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F7FB16EF878200666CF9 /* DatePickerViewController.m */; };
+		2538F7FD16EF878200666CF9 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F7FB16EF878200666CF9 /* DatePickerViewController.m */; };
 		2540D3B616E6367600797E0E /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B6B16E63496006A8B6C /* libFMDB.a */; };
 		2540D3B816E6367D00797E0E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B1F16E63156006A8B6C /* libsqlite3.dylib */; };
 		2540D3C016E6373F00797E0E /* DatabaseServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */; };
@@ -123,6 +125,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2538F7FA16EF878200666CF9 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
+		2538F7FB16EF878200666CF9 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		2540D3BE16E6373F00797E0E /* DatabaseServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseServiceTests.h; sourceTree = "<group>"; };
 		2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseServiceTests.m; sourceTree = "<group>"; };
 		2540D3C216E6394500797E0E /* testSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testSingleton.h; sourceTree = "<group>"; };
@@ -384,6 +388,8 @@
 			children = (
 				2540D42A16E78F5800797E0E /* IndexViewController.h */,
 				2540D42B16E78F5800797E0E /* IndexViewController.m */,
+				2538F7FA16EF878200666CF9 /* DatePickerViewController.h */,
+				2538F7FB16EF878200666CF9 /* DatePickerViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -724,6 +730,7 @@
 				2540D44D16E7A2EE00797E0E /* GouwuCur.m in Sources */,
 				2540D45816E8E30400797E0E /* CartTableViewController.m in Sources */,
 				2540D45D16E8E44A00797E0E /* DetailViewController.m in Sources */,
+				2538F7FC16EF878200666CF9 /* DatePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +764,7 @@
 				2540D44E16E7A2EE00797E0E /* GouwuCur.m in Sources */,
 				2540D45916E8E30400797E0E /* CartTableViewController.m in Sources */,
 				2540D45E16E8E44A00797E0E /* DetailViewController.m in Sources */,
+				2538F7FD16EF878200666CF9 /* DatePickerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

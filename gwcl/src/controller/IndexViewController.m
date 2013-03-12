@@ -32,7 +32,7 @@
 	// Do any additional setup after loading the view.
 //    [self.view setBackgroundColor:[UIColor orangeColor]];
     
-    _topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    _topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 44) andIDelegate:self];
     [self.view addSubview:_topView];
 //
 //    _gouwu_cur_view = [[GouwuCur alloc] initWithFrame:CGRectMake(0, 44, 320, 197)];
@@ -50,5 +50,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - TopViewProtocol implementions
+-(void)left_btn_handler_callback:(UIButton *)btn
+{
+
+}
+
+-(void)right_btn_handler_callback:(UIButton *)btn
+{
+
+}
+
+
 
 @end

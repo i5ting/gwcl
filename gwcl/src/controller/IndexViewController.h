@@ -14,6 +14,6 @@
 #import "CartTableViewController.h"
 
 
-@interface IndexViewController : UIViewController
+@interface IndexViewController : UIViewController <TopViewProtocol>
 
 @end

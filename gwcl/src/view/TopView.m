@@ -19,12 +19,14 @@
 @end
 
 @implementation TopView
+@synthesize _delegate;
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame andIDelegate:(id)delegate
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self._delegate = delegate;
         
         _bg_view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
         [_bg_view setImage:[UIImage imageNamed:@"nab_background"]];
@@ -34,13 +36,15 @@
         _left_btn.frame = CGRectMake(10, 7, 40, 30);
         [_left_btn setImage:[UIImage imageNamed:@"nav_left_btn"] forState:UIControlStateNormal];
         [_left_btn setImage:[UIImage imageNamed:@"nav_left_btn_h"] forState:UIControlStateHighlighted];
+        [_left_btn addTarget:self action:@selector(left_btn_handler:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_left_btn];
         
         
         _right_btn = [UIButton buttonWithType:UIButtonTypeCustom];
         _right_btn.frame = CGRectMake(270, 7, 40, 30);
         [_right_btn setImage:[UIImage imageNamed:@"nav_right_btn"] forState:UIControlStateNormal];
-        [_right_btn setImage:[UIImage imageNamed:@"nav_right_btn_h"] forState:UIControlStateHighlighted];        
+        [_right_btn setImage:[UIImage imageNamed:@"nav_right_btn_h"] forState:UIControlStateHighlighted];
+        [_right_btn addTarget:self action:@selector(right_btn_handler:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_right_btn];
         
         _title_label = [[UILabel alloc] initWithFrame:CGRectMake(100, 12, 123, 20)];
@@ -54,6 +58,16 @@
     return self;
 }
 
+
+#pragma mark - TopViewProtocol implementions
+
+-(void)left_btn_handler:(UIButton *)btn{
+    [self._delegate left_btn_handler_callback:btn];
+}
+
+-(void)right_btn_handler:(UIButton *)btn{
+    [self._delegate right_btn_handler_callback:btn];
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

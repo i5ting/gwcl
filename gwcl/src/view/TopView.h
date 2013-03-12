@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TopViewProtocol <NSObject>
+
+-(void)left_btn_handler_callback:(UIButton *)btn;
+
+-(void)right_btn_handler_callback:(UIButton *)btn;
+
+@end
+
+
+
 @interface TopView : UIView
+
+@property(nonatomic,assign,readwrite) id<TopViewProtocol> _delegate;
+
+- (id)initWithFrame:(CGRect)frame andIDelegate:(id)delegate;
 
 @end
