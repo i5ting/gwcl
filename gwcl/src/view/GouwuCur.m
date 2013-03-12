@@ -51,6 +51,13 @@
         [_gouwu_cur_edit_btn setImage:[UIImage imageNamed:@"gouwu_cur_edit_btn"] forState:UIControlStateNormal];
         [self addSubview:_gouwu_cur_edit_btn];
         
+        _gouwu_cur_continue_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _gouwu_cur_continue_btn.frame = CGRectMake(80, 120, 172, 34);
+        [_gouwu_cur_continue_btn setImage:[UIImage imageNamed:@"gouwu_cur_continue_btn"] forState:UIControlStateNormal];
+        [_gouwu_cur_continue_btn setImage:[UIImage imageNamed:@"gouwu_cur_continue_btn_h"] forState:UIControlStateHighlighted];
+        [self addSubview:_gouwu_cur_continue_btn];
+        
+        
     }
     return self;
 }

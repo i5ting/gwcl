@@ -40,7 +40,7 @@
 //
     
     CartTableViewController *cart_vc = [[CartTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    cart_vc.view.frame = CGRectMake(0, 44, 320, 480-44);
+    cart_vc.view.frame = CGRectMake(0, 44, 320, 480-64);
     cart_vc.clearsSelectionOnViewWillAppear = YES;
     [self.view addSubview:cart_vc.view];
 }
