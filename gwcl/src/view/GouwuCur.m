@@ -28,6 +28,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
         _bg_view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 197)];
         [_bg_view setImage:[UIImage imageNamed:@"gouwu_cur_bg"]];
         [self addSubview:_bg_view];
@@ -36,6 +37,19 @@
         _gouwu_cur_view_bg = [[UIImageView alloc] initWithFrame:CGRectMake(10, 15, 300, 156)];
         [_gouwu_cur_view_bg setImage:[UIImage imageNamed:@"gouwu_cur_view"]];
         [self addSubview:_gouwu_cur_view_bg];
+        
+        _title_label = [[UILabel alloc] initWithFrame:CGRectMake(110, 12, 120, 44)];
+        _title_label.text = @"2013-03-11";
+        _title_label.font = [UIFont systemFontOfSize:20];
+        _title_label.textColor = [UIColor orangeColor];
+        _title_label.backgroundColor = [UIColor clearColor];
+        [self addSubview:_title_label];
+        
+        
+        _gouwu_cur_edit_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _gouwu_cur_edit_btn.frame = CGRectMake(275, 20, 25, 25);
+        [_gouwu_cur_edit_btn setImage:[UIImage imageNamed:@"gouwu_cur_edit_btn"] forState:UIControlStateNormal];
+        [self addSubview:_gouwu_cur_edit_btn];
         
     }
     return self;

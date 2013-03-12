@@ -79,6 +79,8 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
     }
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     // Configure the cell...
     
     Cart *cur_cart = [Cart new];

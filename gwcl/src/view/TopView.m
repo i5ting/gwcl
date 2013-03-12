@@ -32,14 +32,15 @@
         
         _left_btn = [UIButton buttonWithType:UIButtonTypeCustom];
         _left_btn.frame = CGRectMake(10, 7, 40, 30);
-        [_left_btn setImage:[UIImage imageNamed:@"nav_left_btn.jpg"] forState:UIControlStateNormal];
-        
+        [_left_btn setImage:[UIImage imageNamed:@"nav_left_btn"] forState:UIControlStateNormal];
+        [_left_btn setImage:[UIImage imageNamed:@"nav_left_btn_h"] forState:UIControlStateHighlighted];
         [self addSubview:_left_btn];
         
         
         _right_btn = [UIButton buttonWithType:UIButtonTypeCustom];
         _right_btn.frame = CGRectMake(270, 7, 40, 30);
-        [_right_btn setImage:[UIImage imageNamed:@"nav_right_btn.jpg"] forState:UIControlStateNormal];        
+        [_right_btn setImage:[UIImage imageNamed:@"nav_right_btn"] forState:UIControlStateNormal];
+        [_right_btn setImage:[UIImage imageNamed:@"nav_right_btn_h"] forState:UIControlStateHighlighted];        
         [self addSubview:_right_btn];
         
         _title_label = [[UILabel alloc] initWithFrame:CGRectMake(100, 12, 123, 20)];
