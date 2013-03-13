@@ -36,7 +36,7 @@
 @end
 
 @implementation DatePickerViewController
-@synthesize datePicker;
+@synthesize datePicker,bgView;
 
 
 /*
@@ -58,9 +58,21 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     
-    DatePickerBgView *bgView = [[DatePickerBgView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) andIDelegate:self];
+    self.bgView = [[DatePickerBgView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) andIDelegate:self];
     [self.view addSubview:bgView];
-    [bgView release];
+
+    UIImageView *shopping_date_image_view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 217, 106, 29)];
+    shopping_date_image_view.image = [UIImage imageNamed:@"shopping_date_image"];
+    [self.view addSubview:shopping_date_image_view];
+    [shopping_date_image_view release];
+    
+    
+    UIButton *shopping_date_ok_btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    shopping_date_ok_btn.frame = CGRectMake(246, 203, 74, 44);
+    [shopping_date_ok_btn setImage:[UIImage imageNamed:@"shopping_date_ok"] forState:UIControlStateNormal];
+    [self.view addSubview:shopping_date_ok_btn];
+    [shopping_date_ok_btn release];
+    
     
     datePicker = [[UIDatePicker alloc] init];
     datePicker.datePickerMode = UIDatePickerModeDate;
@@ -111,6 +123,7 @@
 }
 
 - (void)dealloc {
+    [bgView release];
     [datePicker release];
     [super dealloc];
 }
@@ -119,7 +132,9 @@
 
 -(void)datePickerBgView_touch_callback
 {
-
+    [self.datePicker removeFromSuperview];
+    [self.bgView removeFromSuperview];
+    [self.view removeFromSuperview];
 }
 
 

@@ -25,7 +25,10 @@
 
 @interface DatePickerViewController : UIViewController <DatePickerBgViewProtocol>{
     UIDatePicker *datePicker;
+    DatePickerBgView *bgView;
 }
-@property (nonatomic,retain) IBOutlet UIDatePicker *datePicker;
+@property (nonatomic,retain) UIDatePicker *datePicker;
+@property (nonatomic,retain) DatePickerBgView *bgView;
+
 -(IBAction)buttonPressed;
 @end
