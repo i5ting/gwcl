@@ -1,4 +1,4 @@
-//
+    //
 //  DatePickerViewController.m
 //  gwcl
 //
@@ -8,8 +8,36 @@
 
 #import "DatePickerViewController.h"
 
+@implementation DatePickerBgView
+
+@synthesize _delegate;
+
+- (id)initWithFrame:(CGRect)frame andIDelegate:(id)delegate
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        self._delegate = delegate;
+        
+        self.backgroundColor = [UIColor blackColor];
+        self.opaque = YES;
+        self.alpha = 0.5f;
+    }
+    return self;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if ([_delegate respondsToSelector:@selector(datePickerBgView_touch_callback)]) {
+        [_delegate datePickerBgView_touch_callback];
+    }
+}
+
+@end
+
 @implementation DatePickerViewController
 @synthesize datePicker;
+
 
 /*
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -29,6 +57,20 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
+    
+    DatePickerBgView *bgView = [[DatePickerBgView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) andIDelegate:self];
+    [self.view addSubview:bgView];
+    [bgView release];
+    
+    datePicker = [[UIDatePicker alloc] init];
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    datePicker.frame = CGRectMake(0, 245, 320, 400);
+    
+ 
+    [datePicker setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
+    
+    [self.view addSubview:datePicker];
+    
     NSDate *now=[[NSDate alloc] init];
     [datePicker setDate:now animated:NO];
     [now release];
@@ -72,4 +114,13 @@
     [datePicker release];
     [super dealloc];
 }
+
+#pragma mark - DatePickerBgViewProtocol protocol implementions
+
+-(void)datePickerBgView_touch_callback
+{
+
+}
+
+
 @end

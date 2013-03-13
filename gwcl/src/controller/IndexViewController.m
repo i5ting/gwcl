@@ -8,6 +8,8 @@
 
 #import "IndexViewController.h"
 
+#import "DatePickerViewController.h"
+
 @interface IndexViewController (){
     TopView *_topView;
     GouwuCur *_gouwu_cur_view;
@@ -59,7 +61,9 @@
 
 -(void)right_btn_handler_callback:(UIButton *)btn
 {
-
+    DatePickerViewController *dvc = [DatePickerViewController new];
+    dvc.view.frame = CGRectMake(0, 0, 320, 480);
+    [self.view addSubview:dvc.view];
 }
 
 

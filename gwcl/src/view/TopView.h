@@ -10,6 +10,7 @@
 
 @protocol TopViewProtocol <NSObject>
 
+@optional
 -(void)left_btn_handler_callback:(UIButton *)btn;
 
 -(void)right_btn_handler_callback:(UIButton *)btn;

@@ -62,19 +62,16 @@
 #pragma mark - TopViewProtocol implementions
 
 -(void)left_btn_handler:(UIButton *)btn{
-    [self._delegate left_btn_handler_callback:btn];
+    if ([_delegate respondsToSelector:@selector(left_btn_handler_callback:)]) {
+        [self._delegate left_btn_handler_callback:btn];
+    }
 }
 
 -(void)right_btn_handler:(UIButton *)btn{
-    [self._delegate right_btn_handler_callback:btn];
+    if ([_delegate respondsToSelector:@selector(left_btn_handler_callback:)]) {
+        [self._delegate right_btn_handler_callback:btn];
+    }
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+
 
 @end

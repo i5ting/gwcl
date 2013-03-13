@@ -7,7 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface DatePickerViewController : UIViewController {
+
+@protocol DatePickerBgViewProtocol <NSObject>
+
+@required
+-(void)datePickerBgView_touch_callback;
+
+@end
+
+@interface DatePickerBgView : UIView
+
+@property(nonatomic,assign,readwrite) id<DatePickerBgViewProtocol> _delegate;
+
+- (id)initWithFrame:(CGRect)frame andIDelegate:(id)delegate;
+
+@end
+
+@interface DatePickerViewController : UIViewController <DatePickerBgViewProtocol>{
     UIDatePicker *datePicker;
 }
 @property (nonatomic,retain) IBOutlet UIDatePicker *datePicker;
