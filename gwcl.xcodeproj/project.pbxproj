@@ -17,6 +17,8 @@
 		2538F80916F0BBAD00666CF9 /* GoodsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F80716F0BBAD00666CF9 /* GoodsListViewController.m */; };
 		2538F80C16F0BBBE00666CF9 /* GoodsFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F80B16F0BBBD00666CF9 /* GoodsFormViewController.m */; };
 		2538F80D16F0BBBE00666CF9 /* GoodsFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F80B16F0BBBD00666CF9 /* GoodsFormViewController.m */; };
+		2538F81116F0C4BD00666CF9 /* GoodsformTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F81016F0C4BD00666CF9 /* GoodsformTopView.m */; };
+		2538F81216F0C4BD00666CF9 /* GoodsformTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2538F81016F0C4BD00666CF9 /* GoodsformTopView.m */; };
 		2540D3B616E6367600797E0E /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B6B16E63496006A8B6C /* libFMDB.a */; };
 		2540D3B816E6367D00797E0E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 25469B1F16E63156006A8B6C /* libsqlite3.dylib */; };
 		2540D3C016E6373F00797E0E /* DatabaseServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */; };
@@ -141,6 +143,8 @@
 		2538F80716F0BBAD00666CF9 /* GoodsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsListViewController.m; sourceTree = "<group>"; };
 		2538F80A16F0BBBD00666CF9 /* GoodsFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsFormViewController.h; sourceTree = "<group>"; };
 		2538F80B16F0BBBD00666CF9 /* GoodsFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsFormViewController.m; sourceTree = "<group>"; };
+		2538F80F16F0C4BD00666CF9 /* GoodsformTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsformTopView.h; sourceTree = "<group>"; };
+		2538F81016F0C4BD00666CF9 /* GoodsformTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsformTopView.m; sourceTree = "<group>"; };
 		2540D3BE16E6373F00797E0E /* DatabaseServiceTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseServiceTests.h; sourceTree = "<group>"; };
 		2540D3BF16E6373F00797E0E /* DatabaseServiceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseServiceTests.m; sourceTree = "<group>"; };
 		2540D3C216E6394500797E0E /* testSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testSingleton.h; sourceTree = "<group>"; };
@@ -278,6 +282,15 @@
 				2538F80116F0B92900666CF9 /* shopping_date_ok.png */,
 			);
 			path = datepicker;
+			sourceTree = "<group>";
+		};
+		2538F80E16F0C48900666CF9 /* goodsform */ = {
+			isa = PBXGroup;
+			children = (
+				2538F80F16F0C4BD00666CF9 /* GoodsformTopView.h */,
+				2538F81016F0C4BD00666CF9 /* GoodsformTopView.m */,
+			);
+			path = goodsform;
 			sourceTree = "<group>";
 		};
 		2540D3B916E636D800797E0E /* src */ = {
@@ -460,6 +473,7 @@
 		2540D44616E79AA300797E0E /* view */ = {
 			isa = PBXGroup;
 			children = (
+				2538F80E16F0C48900666CF9 /* goodsform */,
 				2540D44716E79ACE00797E0E /* TopView.h */,
 				2540D44816E79ACE00797E0E /* TopView.m */,
 				2540D44B16E7A2ED00797E0E /* GouwuCur.h */,
@@ -765,6 +779,7 @@
 				2538F7FC16EF878200666CF9 /* DatePickerViewController.m in Sources */,
 				2538F80816F0BBAD00666CF9 /* GoodsListViewController.m in Sources */,
 				2538F80C16F0BBBE00666CF9 /* GoodsFormViewController.m in Sources */,
+				2538F81116F0C4BD00666CF9 /* GoodsformTopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +816,7 @@
 				2538F7FD16EF878200666CF9 /* DatePickerViewController.m in Sources */,
 				2538F80916F0BBAD00666CF9 /* GoodsListViewController.m in Sources */,
 				2538F80D16F0BBBE00666CF9 /* GoodsFormViewController.m in Sources */,
+				2538F81216F0C4BD00666CF9 /* GoodsformTopView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

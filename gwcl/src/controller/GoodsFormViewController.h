@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GoodsFormViewController : UIViewController
+#import "TopView.h"
+
+@interface GoodsFormViewController : UIViewController <TopViewProtocol>
 
 @end

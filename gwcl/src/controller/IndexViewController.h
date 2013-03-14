@@ -12,8 +12,11 @@
 #import "GouwuCur.h"
 
 #import "CartTableViewController.h"
+#import "DatePickerViewController.h"
+#import "GoodsFormViewController.h"
+#import "GoodsListViewController.h"
 
 
-@interface IndexViewController : UIViewController <TopViewProtocol>
+@interface IndexViewController : UIViewController <TopViewProtocol,DatePickerViewControllerProtocol>
 
 @end

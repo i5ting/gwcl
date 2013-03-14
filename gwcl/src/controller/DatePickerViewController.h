@@ -23,10 +23,19 @@
 
 @end
 
+
+@protocol DatePickerViewControllerProtocol <NSObject>
+
+@required
+-(void)shopping_date_ok_btn_click_callback:(NSString *)currentDateStr;
+
+@end
+
 @interface DatePickerViewController : UIViewController <DatePickerBgViewProtocol>{
     UIDatePicker *datePicker;
     DatePickerBgView *bgView;
 }
+@property(nonatomic,assign,readwrite) id<DatePickerViewControllerProtocol> delegate;
 @property (nonatomic,retain) UIDatePicker *datePicker;
 @property (nonatomic,retain) DatePickerBgView *bgView;
 

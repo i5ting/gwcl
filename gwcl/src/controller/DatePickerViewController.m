@@ -35,9 +35,15 @@
 
 @end
 
+@interface DatePickerViewController()
+
+-(void)shopping_date_ok_btn_click:(UIButton *)btn;
+
+@end
+
 @implementation DatePickerViewController
 @synthesize datePicker,bgView;
-
+@synthesize delegate;
 
 /*
  // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -70,6 +76,7 @@
     UIButton *shopping_date_ok_btn = [UIButton buttonWithType:UIButtonTypeCustom];
     shopping_date_ok_btn.frame = CGRectMake(246, 203, 74, 44);
     [shopping_date_ok_btn setImage:[UIImage imageNamed:@"shopping_date_ok"] forState:UIControlStateNormal];
+    [shopping_date_ok_btn addTarget:self action:@selector(shopping_date_ok_btn_click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:shopping_date_ok_btn];
     [shopping_date_ok_btn release];
     
@@ -77,7 +84,7 @@
     datePicker = [[UIDatePicker alloc] init];
     datePicker.datePickerMode = UIDatePickerModeDate;
     datePicker.frame = CGRectMake(0, 245, 320, 400);
-    
+    [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged ];
  
     [datePicker setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"]];
     
@@ -120,6 +127,24 @@
     [alert release];
     [message release];
     
+}
+
+-(void)dateChanged:(UIDatePicker *)date_picker{
+    
+}
+
+-(void)shopping_date_ok_btn_click:(UIButton *)btn{
+    if ([delegate respondsToSelector:@selector(shopping_date_ok_btn_click_callback:)]) {
+        NSDate *selected_date = [self.datePicker date];
+        
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"yyyyMMdd"];
+        NSString *currentDateStr = [dateFormatter stringFromDate:selected_date];
+        NSLog(@"%@",currentDateStr);
+        [dateFormatter release];
+        
+        [delegate shopping_date_ok_btn_click_callback:currentDateStr];
+    }
 }
 
 - (void)dealloc {

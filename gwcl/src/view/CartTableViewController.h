@@ -14,4 +14,6 @@
 
 @interface CartTableViewController : UITableViewController
 
+
+-(void)reloadData;
 @end

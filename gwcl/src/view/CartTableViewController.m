@@ -23,10 +23,21 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-        
         self._data_array = [[CartDatabaseService sharedInstance] find_carts_by_date_desc];
+        
     }
     return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
+
+-(void)reloadData{
+    self._data_array = [[CartDatabaseService sharedInstance] find_carts_by_date_desc];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad
@@ -86,10 +97,11 @@
     Cart *cur_cart = [Cart new];
     
     if (indexPath.row == 0) {
-        
+        UITableViewCell *cell1 = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, 320, 197)];
         GouwuCur *_gouwu_cur_view = [[GouwuCur alloc] initWithFrame:CGRectMake(0, 0, 320, 197)];
-        [cell.contentView addSubview:_gouwu_cur_view];
+        [cell1.contentView addSubview:_gouwu_cur_view];
         [_gouwu_cur_view release];
+        return cell1;
         
     }else{
         int i = indexPath.row - 1;
@@ -102,11 +114,7 @@
         [cell.contentView addSubview:bg];
         [bg release];
         
-        NSLog(@"date = %d",cur_cart.date);
-        if (cur_cart.date) {
-//            return cell;
-        }
-        
+        NSLog(@"date = %d",cur_cart.date);        
         NSString *date = [NSString stringWithFormat:@"%d",cur_cart.date];
         NSString *year = [date substringWithRange:NSMakeRange(0, 4)];
         NSString *month = [date substringWithRange:NSMakeRange(4, 2)];
@@ -115,9 +123,6 @@
         //        l.text = [NSString stringWithFormat:@"--%d ",cur_cart.date];
         
         NSString *y_and_m_str = [NSString stringWithFormat:@"%@-%@",year,month];
-        
-        
-        
         
         UILabel *ym_label = [[UILabel alloc] initWithFrame:CGRectMake(10, 32, 38, 10)];
         ym_label.backgroundColor = [UIColor clearColor];
