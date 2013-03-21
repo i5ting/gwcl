@@ -8,6 +8,6 @@
 
 #import "DatabaseService.h"
 
-@interface ItemDatabaseService : DatabaseService
+@interface ItemDatabaseService : No320DatabaseService
 
 @end

@@ -11,6 +11,7 @@
 @implementation MyCategoryDatabaseService
 
 
+DEF_SINGLETON(MyCategoryDatabaseService)
 DEFINE_SINGLETON_FOR_CLASS(MyCategoryDatabaseService)
 //
 //cid INTEGER primary key autoincrement,
@@ -34,4 +35,20 @@ DEFINE_SINGLETON_FOR_CLASS(MyCategoryDatabaseService)
     return f;
 }
 
+
+-(NSMutableArray *)find_second_level_category:(int)pid
+{
+    NSString *sql = [NSString stringWithFormat:@"select distinct title from tb_category  where pid=%d;",pid];
+    //
+    NSMutableArray *f =[self find_by_sql:sql with_rs_callback:^No320BaseModel *(FMResultSet *_rs,int _line_num) {
+        MyCategory *obj = [MyCategory new];
+        //        obj.cid =[_rs intForColumn:@"cid"];
+        obj.parent_id = pid;
+        obj.name =[_rs stringForColumn:@"title"];
+//        obj.danwei =[_rs stringForColumn:@"danwei"];
+        return obj;
+    }];
+    
+    return f;
+}
 @end

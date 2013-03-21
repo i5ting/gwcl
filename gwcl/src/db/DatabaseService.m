@@ -12,6 +12,55 @@
 
 #define _DBFILE_DIR  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
 
+
+#pragma mark - No320DatabaseService
+@interface No320DatabaseService()
+
+@property(nonatomic,retain,readonly) DatabaseService *db;
+
+@end
+
+@implementation No320DatabaseService
+@synthesize db;
+
+@synthesize traceExecution,logsErrors;
+
+-(id)init
+{
+    if (self = [super init]) {
+        db = [DatabaseService sharedInstance];
+    }
+    
+    return self;
+}
+ 
+
+/**
+ *
+ *
+ *
+ */
+-(NSMutableArray *)find_by_sql:(NSString *)query_sql with_rs_callback:( No320BaseModel *(^)(FMResultSet *_rs/*result set*/,int _line_num/*record in result number(from 0)*/))rs_block NS_AVAILABLE(10_6, 4_0)
+{
+   return [db find_by_sql:query_sql with_rs_callback:rs_block];
+}
+
+
+/**
+ * 所有返回一个字段的，都可以使用此
+ *
+ *
+ */
+-(int)find_one_column_by_sql:(NSString *)query_sql
+{
+    return [db find_one_column_by_sql:query_sql];
+}
+
+
+@end
+
+
+#pragma mark - DatabaseService
 @interface DatabaseService()
 
 

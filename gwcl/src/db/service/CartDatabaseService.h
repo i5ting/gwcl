@@ -8,9 +8,13 @@
 
 #import "DatabaseService.h"
 #import "Cart.h"
+#import "MyCategory.h"
 
-@interface CartDatabaseService : DatabaseService
+@interface CartDatabaseService : No320DatabaseService
 
+AS_SINGLETON(CartDatabaseService)
+
+DEFINE_SINGLETON_FOR_HEADER(CartDatabaseService)
 //ok
 -(BOOL)create_by_date:(NSString *)date;
 
@@ -25,5 +29,6 @@
 
 //ok
 -(int)find_all_count_by_date:(NSString *)date;
+ 
 
 @end

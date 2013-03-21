@@ -9,6 +9,8 @@
 #import "GoodsFormViewController.h"
 #import "GoodsformTopView.h"
 
+#import "MyCategoryDatabaseService.h"
+
 @interface GoodsFormViewController (){
     GoodsformTopView *_topView;
 }
@@ -18,11 +20,17 @@
 
 @property(nonatomic,retain,readwrite) UIPickerView *category_picker_view;
 
+@property(nonatomic,retain,readwrite) NSMutableArray *category_array;
+@property(nonatomic,retain,readwrite) NSMutableDictionary *category_dict;
+
 @end
 
+
+#import "CartDatabaseService.h"
 @implementation GoodsFormViewController
 @synthesize tableView;
 @synthesize category_picker_view;
+@synthesize category_array;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,6 +38,20 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+         [[CartDatabaseService sharedCartDatabaseService] find_carts_by_date_desc];
+        MyCategoryDatabaseService *cdds = [MyCategoryDatabaseService instance];
+        self.category_array = [cdds find_first_level_category];
+        for (MyCategory *obj in self.category_array) {
+            NSString *key = [NSString stringWithFormat:@"pid_%d",obj.parent_id];
+            
+            NSArray *f = [cdds find_second_level_category:obj.parent_id];
+            
+            [self.category_dict setObject:f forKey:key];
+        }
+        
+        
+        NSLog(@"%@",self.category_dict);
+        
     }
     return self;
 }
@@ -302,6 +324,7 @@
 {
     return @"ddd";
 }
+
 
 
 @end

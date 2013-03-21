@@ -38,12 +38,14 @@ DEFINE_SINGLETON_FOR_CLASS(IndexViewController);
     if (self) {
         // Custom initialization
         
-        self._data_array = [[CartDatabaseService sharedInstance] find_carts_by_date_desc];
+        self._data_array = [[CartDatabaseService sharedCartDatabaseService] find_carts_by_date_desc];
         _cur_cell_index = 0;
         
         
-        NSMutableArray *m = [[MyCategoryDatabaseService sharedMyCategoryDatabaseService] find_first_level_category];
-        NSLog(@"%@",m);
+//       MyCategoryDatabaseService *mm =  [[MyCategoryDatabaseService alloc] init];
+//
+//        NSMutableArray *m = [[MyCategoryDatabaseService sharedMyCategoryDatabaseService] find_first_level_category];
+//        NSLog(@"%@",m);
     }
     return self;
 }
@@ -107,7 +109,7 @@ DEFINE_SINGLETON_FOR_CLASS(IndexViewController);
 
 -(void)shopping_date_ok_btn_click_callback:(NSString *)currentDateStr
 {
-    BOOL is_saved = [[CartDatabaseService sharedInstance] create_by_date:currentDateStr];
+    BOOL is_saved = [[CartDatabaseService sharedCartDatabaseService] create_by_date:currentDateStr];
     if (is_saved) {
         GoodsFormViewController *f = [GoodsFormViewController new];
         [self.navigationController pushViewController:f animated:YES];
@@ -127,7 +129,7 @@ DEFINE_SINGLETON_FOR_CLASS(IndexViewController);
 
 #pragma mark - table viewcontroller
 -(void)reloadData{
-    self._data_array = [[CartDatabaseService sharedInstance] find_carts_by_date_desc];
+    self._data_array = [[CartDatabaseService sharedCartDatabaseService] find_carts_by_date_desc];
     [self.tableView reloadData];
 }
 
