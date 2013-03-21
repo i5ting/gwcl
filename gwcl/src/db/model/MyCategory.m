@@ -12,6 +12,7 @@
 
 @synthesize name,danwei,parent_id;
 @synthesize level;
+@synthesize c_id;
 
 -(void)dealloc
 {

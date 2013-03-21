@@ -16,7 +16,6 @@
 #pragma mark - No320DatabaseService
 @interface No320DatabaseService()
 
-@property(nonatomic,retain,readonly) DatabaseService *db;
 
 @end
 

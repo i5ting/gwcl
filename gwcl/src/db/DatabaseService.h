@@ -12,10 +12,12 @@
 
 #import "No320BaseModel.h"
 
+@class DatabaseService;
 
 @interface No320DatabaseService : NSObject{
     
 }
+@property(nonatomic,retain,readonly) DatabaseService *db;
 
 @property(nonatomic,assign,readwrite) BOOL traceExecution;
 @property(nonatomic,assign,readwrite) BOOL logsErrors;

@@ -16,14 +16,15 @@ DEFINE_SINGLETON_FOR_CLASS(CartDatabaseService)
 
 -(BOOL)create_by_date:(NSString *)date
 {
+    
     NSString *sql = @"insert into tb_cart(cart_date,all_count,finished_count) values(?,0,0);";
-    return  [db executeUpdate:sql,date,nil];
+    return  [self.db executeUpdate:sql,date,nil];
 }
 
 -(BOOL)delete_by_date:(NSString *)date
 {
     NSString *sql = @"delete from tb_cart where cart_date=?;";
-    return  [db executeUpdate:sql,date,nil];
+    return  [self.db executeUpdate:sql,date,nil];
 }
 
 -(NSMutableArray *)find_carts_by_date_desc

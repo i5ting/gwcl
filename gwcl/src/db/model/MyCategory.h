@@ -59,6 +59,12 @@
  */
 @property(nonatomic,retain,readwrite) NSString *name;
 
+
+
+/**
+ * 分类id
+ */
+@property(nonatomic,assign,readwrite) int c_id;
 /**
  * 分类归属
  */

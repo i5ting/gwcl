@@ -41,10 +41,12 @@
          [[CartDatabaseService sharedCartDatabaseService] find_carts_by_date_desc];
         MyCategoryDatabaseService *cdds = [MyCategoryDatabaseService instance];
         self.category_array = [cdds find_first_level_category];
+        
+        self.category_dict = [NSMutableDictionary dictionary];
         for (MyCategory *obj in self.category_array) {
-            NSString *key = [NSString stringWithFormat:@"pid_%d",obj.parent_id];
-            
-            NSArray *f = [cdds find_second_level_category:obj.parent_id];
+            NSString *key = [NSString stringWithFormat:@"pid_%d",obj.c_id];
+            NSLog(@"key = %@",key);
+            NSArray *f = [cdds find_second_level_category:obj.c_id];
             
             [self.category_dict setObject:f forKey:key];
         }
@@ -316,13 +318,35 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
+    int cid = [self.category_array objectAtIndex:component];
+    NSString *key = [NSString stringWithFormat:@"pid_",cid];
+  
+    if (component == 0) {
+        return [self.category_array count];
+    }else{
+        return 2;
+    }
+    
+    
     return 2;
+    if ([self.category_dict objectForKey:key]) {
+        return [[self.category_dict objectForKey:key] count];
+    }else{
+        return 0;
+    }
+//    return [[self.category_dict objectForKey:key] count]>0 ? 0;
 }
 
 #pragma mark - UIPickerViewDelegate  delegate
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return @"ddd";
+    if (component == 0) {
+        MyCategory *c = [self.category_array objectAtIndex:row];
+        
+        return [(MyCategory *)[self.category_array objectAtIndex:row] name];
+    }
+    NSString *key = [NSString stringWithFormat:@"pid_%d",row];
+    return  [(MyCategory *)[self.category_dict objectForKey:key] name];
 }
 
 
