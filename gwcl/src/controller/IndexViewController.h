@@ -8,15 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "TopView.h"
-
-#import "GouwuCur.h"
-
-#import "CartTableViewController.h"
+ 
 #import "DatePickerViewController.h"
 #import "GoodsFormViewController.h"
 #import "GoodsListViewController.h"
 
+#import "DetailViewController.h"
+#import "CartDatabaseService.h"
+#import "GouwuCur.h"
+#import "Cart.h"
 
-@interface IndexViewController : UIViewController <TopViewProtocol,DatePickerViewControllerProtocol>
+
+@interface IndexViewController : UIViewController <TopViewProtocol
+                                        , DatePickerViewControllerProtocol
+                                        , UITableViewDelegate
+                                        , UITableViewDataSource>
+
+
+DEFINE_SINGLETON_FOR_HEADER(IndexViewController);
 
 @end

@@ -8,6 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "CartDatabaseService.h"
+#import "MyCategoryDatabaseService.h"
 
 @interface CartDatabaseServiceTests : SenTestCase
 

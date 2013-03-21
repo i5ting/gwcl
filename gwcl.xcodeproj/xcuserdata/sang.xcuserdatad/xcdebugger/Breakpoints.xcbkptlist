@@ -21,25 +21,64 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "gwclTests/src/db/service/CartDatabaseServiceTests.m"
-         timestampString = "384273713.48052"
+         timestampString = "385492103.190964"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
          landmarkName = "-test_delete_by_date"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "No"
+         shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "gwcl/src/view/CartTableViewController.m"
-         timestampString = "384911825.673421"
+         filePath = "gwclTests/src/db/service/CartDatabaseServiceTests.m"
+         timestampString = "385492056.956617"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "114"
-         endingLineNumber = "114"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
+         landmarkName = "-test_find_first_level"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "gwcl/src/db/service/MyCategoryDatabaseService.m"
+         timestampString = "385492418.11063"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "24"
+         endingLineNumber = "24"
+         landmarkName = "-find_first_level_category"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "gwcl/src/controller/IndexViewController.m"
+         timestampString = "385492491.710437"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "-initWithNibName:bundle:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "gwcl/src/db/service/MyCategoryDatabaseService.m"
+         timestampString = "385492688.047632"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "23"
+         endingLineNumber = "23"
+         landmarkName = "-find_first_level_category"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

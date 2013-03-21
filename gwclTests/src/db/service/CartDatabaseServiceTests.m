@@ -11,6 +11,7 @@
 @interface CartDatabaseServiceTests()
 {
     CartDatabaseService *cdbs;
+    MyCategoryDatabaseService *category_dbs;
 }
 @end
 
@@ -23,6 +24,7 @@
     // Set-up code here.
     
     cdbs = [CartDatabaseService sharedInstance];
+    category_dbs = [MyCategoryDatabaseService sharedInstance];
 }
 
 - (void)tearDown
@@ -42,6 +44,7 @@
     }
 
 }
+
 
 
 -(void)testInsert
@@ -169,6 +172,14 @@
         assert_nil(nil, @"sslsls");
     },@"这是自定义的消息");
 
+}
+
+#pragma mark - dsdsdds
+
+-(void)test_find_first_level
+{
+    NSMutableArray *m = [category_dbs find_first_level_category];
+    NSLog(@"%@",m);
 }
 
 @end

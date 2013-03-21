@@ -10,6 +10,9 @@
 
 #import "TopView.h"
 
-@interface GoodsFormViewController : UIViewController <TopViewProtocol>
+@interface GoodsFormViewController : UIViewController <TopViewProtocol
+                                        ,UITableViewDelegate
+                                        , UITableViewDataSource,UITextFieldDelegate
+                                        ,UIPickerViewDataSource, UIPickerViewDelegate>
 
 @end

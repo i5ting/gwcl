@@ -22,10 +22,8 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    
     UINavigationController *rootvc = [[UINavigationController alloc]
                                       initWithRootViewController:[IndexViewController new]];
-    
     [rootvc setNavigationBarHidden:YES];
     self.window.rootViewController = rootvc;
     self.window.backgroundColor = [UIColor whiteColor];

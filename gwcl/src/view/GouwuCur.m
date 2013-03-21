@@ -7,6 +7,7 @@
 //
 
 #import "GouwuCur.h"
+ 
 
 @interface GouwuCur()
 {
@@ -22,12 +23,15 @@
 
 
 @implementation GouwuCur
+@synthesize _delegate;
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initWithFrame:(CGRect)frame andIDelegate:(id)delegate
 {
     self = [super initWithFrame:frame];
+
     if (self) {
         // Initialization code
+        _delegate = delegate;
         
         _bg_view = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 197)];
         [_bg_view setImage:[UIImage imageNamed:@"gouwu_cur_bg"]];
@@ -55,6 +59,7 @@
         _gouwu_cur_continue_btn.frame = CGRectMake(80, 120, 172, 34);
         [_gouwu_cur_continue_btn setImage:[UIImage imageNamed:@"gouwu_cur_continue_btn"] forState:UIControlStateNormal];
         [_gouwu_cur_continue_btn setImage:[UIImage imageNamed:@"gouwu_cur_continue_btn_h"] forState:UIControlStateHighlighted];
+        [_gouwu_cur_continue_btn addTarget:self action:@selector(addItem:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_gouwu_cur_continue_btn];
         
         
@@ -70,5 +75,15 @@
     // Drawing code
 }
 */
+
+
+- (void)addItem:(UIButton *)btn
+{
+    
+    if ([_delegate respondsToSelector:@selector(addItem_callback:)]) {
+        [_delegate addItem_callback:btn];
+    }
+    
+}
 
 @end

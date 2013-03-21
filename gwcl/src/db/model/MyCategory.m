@@ -11,6 +11,7 @@
 @implementation MyCategory
 
 @synthesize name,danwei,parent_id;
+@synthesize level;
 
 -(void)dealloc
 {

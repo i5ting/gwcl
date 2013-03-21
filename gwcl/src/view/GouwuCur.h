@@ -8,6 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol GouwuCurViewProtocol <NSObject>
+
+@optional
+-(void)addItem_callback:(UIButton *)btn;
+
+
+
+@end
+
+
+
 @interface GouwuCur : UIView
+
+@property(nonatomic,assign,readwrite) id<GouwuCurViewProtocol> _delegate;
+ 
+
+- (id)initWithFrame:(CGRect)frame andIDelegate:(id)delegate;
 
 @end
