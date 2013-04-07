@@ -21,6 +21,7 @@
 @property(nonatomic,retain,readwrite) UIPickerView *category_picker_view;
 
 @property(nonatomic,retain,readwrite) NSMutableArray *category_array;
+@property(nonatomic,retain,readwrite) NSMutableArray *second_array;
 @property(nonatomic,retain,readwrite) NSMutableDictionary *category_dict;
 
 @end
@@ -31,6 +32,7 @@
 @synthesize tableView;
 @synthesize category_picker_view;
 @synthesize category_array;
+@synthesize second_array;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,6 +53,7 @@
             [self.category_dict setObject:f forKey:key];
         }
         
+        second_array = [NSMutableArray array];
         
         NSLog(@"%@",self.category_dict);
         
@@ -346,9 +349,41 @@
         return [(MyCategory *)[self.category_array objectAtIndex:row] name];
     }
     NSString *key = [NSString stringWithFormat:@"pid_%d",row];
+    return key;
     return  [(MyCategory *)[self.category_dict objectForKey:key] name];
 }
 
+
+//只要选取器发生变化就会触发该事件，进行关联，具体就是当你更改第一个滚轮总的值是，第二个滚轮会自动更新
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    
+   
+    if(component == 0){
+        MyCategory *c = [self.category_array objectAtIndex:row];
+        NSString *key = [NSString stringWithFormat:@"pid_%d",row];
+        self.second_array = (NSArray *)[self.category_dict objectForKey:key]  ;
+                         
+        [category_picker_view selectRow:0 inComponent:1 animated:NO];
+        [category_picker_view reloadComponent:1];//重新装载第二个滚轮中的值
+        
+    }
+//    if(component == first)//如果响应的是第一个滚轮，则处理下面的动作
+//    {
+//        NSString *selectState = [self.firstArray objectAtIndex:row];//得到第一个滚轮当前的行
+//        NSArray *array = [dictionary objectForKey:selectState];//根据第一个滚轮当前值从dictionary中选择对应的第二个滚轮中的值
+//        self.secondArray = array;
+//        [picker selectRow:0 inComponent:second animated:NO];
+//        [picker reloadComponent:second];//重新装载第二个滚轮中的值
+//    }
+    
+}
+-(CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component//使用委托设置Picker的大小
+{
+//    if(component == second)//如果是第二个滚轮，就设置大小为90
+//        return 90;
+    return 200;//否则设置为200
+}
 
 
 @end

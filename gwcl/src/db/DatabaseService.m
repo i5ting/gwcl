@@ -20,14 +20,14 @@
 @end
 
 @implementation No320DatabaseService
-@synthesize db;
+@synthesize db_service;
 
 @synthesize traceExecution,logsErrors;
 
 -(id)init
 {
     if (self = [super init]) {
-        db = [DatabaseService sharedInstance];
+        db_service = [DatabaseService sharedInstance];
     }
     
     return self;
@@ -41,7 +41,7 @@
  */
 -(NSMutableArray *)find_by_sql:(NSString *)query_sql with_rs_callback:( No320BaseModel *(^)(FMResultSet *_rs/*result set*/,int _line_num/*record in result number(from 0)*/))rs_block NS_AVAILABLE(10_6, 4_0)
 {
-   return [db find_by_sql:query_sql with_rs_callback:rs_block];
+   return [db_service find_by_sql:query_sql with_rs_callback:rs_block];
 }
 
 
@@ -52,7 +52,7 @@
  */
 -(int)find_one_column_by_sql:(NSString *)query_sql
 {
-    return [db find_one_column_by_sql:query_sql];
+    return [db_service find_one_column_by_sql:query_sql];
 }
 
 
@@ -66,7 +66,7 @@
 @end
 
 @implementation DatabaseService
-
+@synthesize db;
 @synthesize logsErrors;
 @synthesize traceExecution;
 

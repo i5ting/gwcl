@@ -14,10 +14,19 @@
 
 @class DatabaseService;
 
+
+
+/**
+ *  No320DatabaseService 是一个委托接口
+ * 
+ *  如果需要子类可以通过访问接口
+ *       return  [self.db_service.db executeUpdate:sql,date,nil];
+ *
+ */
 @interface No320DatabaseService : NSObject{
     
 }
-@property(nonatomic,retain,readonly) DatabaseService *db;
+@property(nonatomic,retain,readonly) DatabaseService *db_service;
 
 @property(nonatomic,assign,readwrite) BOOL traceExecution;
 @property(nonatomic,assign,readwrite) BOOL logsErrors;
@@ -39,13 +48,21 @@
 
 @end
 
+
+
+
+/**
+ *  DatabaseService 封装便捷接口
+ *  
+ *
+ */
 @interface DatabaseService : NSObject{
-    FMDatabase *db;
     FMDatabaseQueue *queue;
 }
 
 + (id)sharedInstance;
 
+@property(nonatomic,retain,readwrite) FMDatabase *db;
 @property(nonatomic,assign,readwrite) BOOL traceExecution;
 @property(nonatomic,assign,readwrite) BOOL logsErrors;
 
